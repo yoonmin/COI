@@ -11,7 +11,17 @@
 	</head>
 
 	<body>
+		{% include "app_coi/header.html" %}
+
 
 		{% block content %}{% endblock content %}
-	</body>
+
+		{% include "app_coi/footer.html" %}
+
+
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>var _gaq=[['_setAccount','UA-3572058-1'],['_trackPageview'],['_setDomainName','uchicago.edu'],['_setAllowAnchor', true],['secondTracker._setAccount','UA-12801400-1'],['secondTracker._trackPageview'],['secondTracker._setDomainName','uchicago.edu'],['secondTracker._setAllowAnchor', true]];(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+		
+	</body>	
 </html>

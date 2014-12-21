@@ -1,151 +1,189 @@
-* {
-  /*border: 2px solid red;*/
+@font-face {
+  font-family: "ProximaNova-Reg";
+  src: url("../fonts/ProximaNova-Reg.ttf");
 }
 
-
 * {
-  font-family: Helvetica;
-  font-size: 17px;
+  margin: 0;
+  padding: 0;
+
+  font-family: ProximaNova-Reg;
+  -webkit-font-smoothing: antialiased;
+  
+  /*-webkit-box-shadow:inset 0px 0px 0px 1px #f00;
+  -moz-box-shadow:inset 0px 0px 0px 1px #f00;
+  box-shadow:inset 0px 0px 0px 1px #f00;
+*/
 }
 
 ul {
   list-style: none;
 }
 
-body {
-  width: 60%;
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+#navbar .navbar_menu {
+  list-style: none;
+/*  -webkit-padding-before: 0.5em;
+  -webkit-padding-after: 0.5em;
+  -webkit-padding-end: 0px;
+  -webkit-padding-start: 10px;*/
+}
+
+
+
+#navbar_top {
+  color: #999;
+  font-size: 1.2vw;
+  background: linear-gradient(to bottom, #565656 0%, #3d3d3d 100%);
+  border-bottom: 1px solid #292929;
+  padding: 1vw;
+}
+#navbar_top a {
+  color: #999;
+  margin-left: 2vw;
+}
+#navbar_top_ul {
+  width: 75%;
   margin: 0 auto;
-  padding: 0;
-}
-
-body * {
-  margin: 0;
-  padding: 0;
-}
-
-
-
-#div_icons {
-  position: absolute;
-  top: 20px;
-  right: -50px;
-}
-
-.social_icon {
-  height: 20%;
-  width: 20%;
-}
-
-
-
-#div_navbar {  
-  vertical-align: middle;
-}
-
-
-
-
-
-#div_search {
-  display: inline-block;
-  vertical-align: middle;
-
-  border-bottom: 2px solid black;
-  border-radius: 1px;
-
-  margin-left: 80px;
-}
-
-#div_search #search_input {
-  height: 28px;
-  width: 150px;
-
-  border: none;
-  box-shadow: none;
-}
-
-#div_search #search_submit {
-  cursor: pointer;
-
-  height: 28px;
-  width: 25px;
-
-  /*margin-top: 2px;*/
-  /*margin-left: 36px;*/
-
-  background-image: url("../img/search_icon.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: none;
-
-  opacity: 0.5;
-}
-
-#div_search #search_submit:hover {
-  opacity: 1.0;
-}
-
-
-
-
-#div_menu {
-  display: inline-block;
-}
-
-#div_menu a, a:visited, a:link, a:active {
-  text-decoration: none; 
-  color: #000000;
-
-  transition:color .2s ease-in-out;
-  -webkit-transition:color .2s ease-in-out;
-  -o-transition:color .2s ease-in-out;
-  -moz-transition:color .2s ease-in-out;
-}
-
-#div_menu .li_menu_item {
-  margin: 30px;
-
-  display: inline-block;
-  font-size: 20px;
-  font-weight: bold;   
-}
-
-#div_menu .li_menu_item:hover a {
-  color: #2ECCFA;
-}
-
-#div_menu .h_bar {
-  border-left: 1px solid gray;  
-}
-
-
-
-
-
-#ul_leaks {
-  margin-top: 30px;
-}
-
-.leak_title {
-  font-size: 20px;
-  font-weight: bold; 
-  color: #2ECCFA;
-}
-
-.leak_date {
   text-align: right;
 }
-
-.leak_document {
-  height: 60px;
-  width: 50px;  
-
-  background-image: url("../img/pdf_icon.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: none;  
-
-  margin-bottom: 80px;
+#navbar_top li {
+  display: inline;
 }
 
+
+#navbar_middle {
+  height: 150px;
+  background: linear-gradient(to bottom, #124587 0%, #102b64 100%);
+}
+
+
+
+#navbar_bottom {
+  border-top: 1px solid #0f2555;
+  font-size: 1.5vw;
+  text-align: center;
+  background: linear-gradient(to bottom, #124587 0%, #102b64 100%);
+}
+#navbar_bottom_ul {
+  display: table;
+  width: 75%;
+  margin: 0 auto;
+}
+#navbar_bottom li {
+  display: inline-table;
+  width: auto;
+  padding: 0.5vw 0px;
+}
+#navbar_bottom a {
+  width: 20%;
+  display: inline-block;  
+  color: #eeeeee;
+}
+
+
+
+#navbar_bottom a:hover {
+  background-color: white;
+  color: #124587;
+  -webkit-transition-duration: .3s;
+  -moz-transition-duration: .3s;
+  -o-transition-duration: .3s;
+  transition-duration: .3s;
+  -ms-transition-duration: 0s;
+}
+
+
+
+.menu_hidden {
+  /*display: none;*/
+  background-color: white;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 75%;
+  position: absolute;
+}
+
+
+
+
+
+
+
+
+#footer {
+  overflow: hidden;
+
+  color: #999;
+  font-size: 1.3vw;  
+
+  background: linear-gradient(to bottom, #565656 0%, #3d3d3d 100%);
+  border-bottom: 1px solid #292929;
+
+}
+
+#footer a {
+  color: #999;
+}
+
+#footer #footer_table {
+  float:right;
+  /*display: table;*/
+  padding: 20px;
+}
+
+#footer .footer_ul {
+  border-left: 1px solid #858585;
+  height: 95px;
+}
+
+
+.div_col {
+  text-align: justify;
+  text-justify: inter-word;
+
+  padding-left: 40px;
+  display: table-cell;
+  max-width: 360px;
+}
+
+.ul_col {
+  padding-left: 10px;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.img_index {
+  width: 100%;
+}
 
