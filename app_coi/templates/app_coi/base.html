@@ -11,16 +11,6 @@
 	</head>
 
 	<body>
-		{% include "app_coi/header.html" %}
-
-
-		{% block content %}{% endblock content %}
-
-		{% include "app_coi/footer.html" %}
-
-
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
 		<!-- Google Tag Manager -->
 		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PQBJ72"
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -30,6 +20,17 @@
 		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','GTM-PQBJ72');</script>
 		<!-- End Google Tag Manager -->
+
+
+		{% include "app_coi/header.html" %}
+
+
+		{% block content %}{% endblock content %}
+
+		{% include "app_coi/footer.html" %}
+
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 	</body>	
 </html>
