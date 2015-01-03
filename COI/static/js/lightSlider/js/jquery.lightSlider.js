@@ -195,7 +195,7 @@
                         e.preventDefault();
                         if ($(this).attr('class') === 'lSPrev') {
                             $('#news_col').children().eq(scene-1).find('li').removeClass('active');
-                            $('#news_description').children().eq(scene-1).animate({'right': '5000px'}, 500, function(){});
+                            $('#news_description').children().eq(scene-1).animate({'right': '1000px'}, 500, function(){});
                             $('#news_description').children().eq(scene-1).attr('class', 'hidden');
 
                             $el.goToPrevSlide();
@@ -214,7 +214,7 @@
                             
                         } else {
                             $('#news_col').children().eq(scene-1).find('li').removeClass('active');
-                            $('#news_description').children().eq(scene-1).animate({'right': '5000px'}, 500, function(){});
+                            $('#news_description').children().eq(scene-1).animate({'right': '1000px'}, 500, function(){});
                             $('#news_description').children().eq(scene-1).attr('class', 'hidden');
                             
                             $el.goToNextSlide();
@@ -447,7 +447,7 @@
                         var current_index = active.index()+1;
                         if (scene != current_index) {
                             $("#news_col .active").removeClass("active");
-                            active.animate({'right': '5000px'}, 500, function(){});
+                            active.animate({'right': '1000px'}, 500, function(){});
                             active.attr('class', 'hidden');
                         }
                         active = $('#news_description').children().eq(scene-1);
