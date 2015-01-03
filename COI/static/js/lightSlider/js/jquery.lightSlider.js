@@ -430,6 +430,7 @@
                     var $pager = $cSouter.find('.lSPager').find('li');
                     $pager.first().addClass('active');
                     $pager.on('click', function () {
+
                         if (settings.loop === true && settings.mode === 'slide') {
                             scene = scene + ($pager.index(this) - $cSouter.find('.lSPager').find('li.active').index());
                         } else {
@@ -439,7 +440,23 @@
                         if (settings.gallery === true) {
                             $this.slideThumb();
                         }
+
                         clearInterval(interval);
+
+                        var active = $('#news_description .active');
+                        var current_index = active.index()+1;
+                        if (scene != current_index) {
+                            $("#news_col .active").removeClass("active");
+                            active.animate({'right': '5000px'}, 500, function(){});
+                            active.attr('class', 'hidden');
+                        }
+                        active = $('#news_description').children().eq(scene-1);
+                        if (scene != current_index) {
+                            $('#news_col').children().eq(scene-1).find('li').addClass('active');
+                            active.animate({'right': '0'}, 500, function(){});
+                            active.attr('class', 'active');
+                        } 
+
                         return false;
                     });
                 };
