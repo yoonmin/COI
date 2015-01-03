@@ -1,34 +1,39 @@
 <div id="footer">
 
-	<div id="footer_table">
+	{% load staticfiles %}
 
-
-
-		<div class="div_col">
-			<div class="footer_ul">
-				<ul class="ul_col">
-					<a href="#"><li>Directories</a>
-					<a href="#"><li>Maps</a>
-					<a href="#"><li>Contact Us</a>
-					<a href="#"><li>A-Z Index</a>
-				</ul>
-			</div>
-		</div>
-
-		<div class="div_col">
-			<div class="footer_ul">
-				<ul class="ul_col">
-					Center on Organizational Innovation<br>
-					803 International Affairs<br>
-					MC 3355<br>
-					420 West 118th St<br>
-					New York, NY 10027<br>
-				</ul>
-			</div>
-		</div>
-
-
-
+	<div id="footer_social">
+		<a href="#"><img class="social_img" src="{% static 'img/footer_cu.png'%}"></a>
+		<a href="#"><img class="social_img" src="{% static 'img/footer_fb.png'%}"></a>
+		<a href="#"><img class="social_img" src="{% static 'img/footer_twitter.png'%}"></a>
+		<a href="#"><img class="social_img" src="{% static 'img/footer_yt.png'%}"></a>
 	</div>
+
+	
+
+	<a href="#"><img id='footer_logo' src="{% static 'img/logo.png'%}" /></a>
+
+
+	<div id="footer_right">
+		<ul class="footer_col">
+			<a href="#"><li>Maps</li></a>
+			<a href="#"><li>A-Z Index</li></a>
+			<a href="#"><li>Contact Us</li></a>
+			<a href="#"><li>External Links</li></a>
+		</ul>
+		
+
+		<ul class="footer_col">
+			Center on Organizational Innovation<br>
+			803 International Affairs<br>
+			MC 3355<br>
+			420 West 118th St<br>
+			New York, NY 10027<br>
+		</ul>
+	</div>
+
+
+
+
 			
 </div>

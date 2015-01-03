@@ -7,30 +7,38 @@
 		{% block external %}
 			{% load staticfiles %}
 			<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+			<link type="text/css" rel="stylesheet" href="{% static 'js/lightSlider/css/lightSlider.css' %}" />
 		{% endblock external %}
 	</head>
 
 	<body>
-		<!-- Google Tag Manager -->
-		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PQBJ72"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-PQBJ72');</script>
-		<!-- End Google Tag Manager -->
-
-
 		{% include "app_coi/header.html" %}
 
 
-		{% block content %}{% endblock content %}
+		<div id="content">
+			{% block content %}{% endblock content %}
+		</div>
+
 
 		{% include "app_coi/footer.html" %}
 
 
+
+		<div id="copy_right">
+			&copy; 2015 Columbia University
+			<div id="yoon">Created by Yoon Min</div>
+		</div>
+
+
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
+		<script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
+
+		<script src="{% static 'js/base.js' %}"></script>
+		<script src="{% static 'js/lightSlider/js/jquery.lightSlider.js' %}"></script>
+		
 
 	</body>	
 </html>
