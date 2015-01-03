@@ -167,7 +167,7 @@ body {
 #navbar > #navbar_top > #navbar_logo > div {
   top: 0; left: 0; bottom: 0; right: 0;
   position: absolute;
-  height: 60%;
+  height: 66%;
   width: 50%;
   overflow: auto;
   margin: auto;
@@ -861,7 +861,7 @@ body {
 
 #footer > #footer_social {
   display: inline-block;
-  margin-left: 5%;
+  margin-left: 4%;
   width: 25%;
 }
 
@@ -877,8 +877,8 @@ body {
 }
 
 #footer #footer_logo {
-  width: 23%;
-  margin-left: 3%;
+  width: 30%;
+  /*margin-left: 1%;*/
 
   margin-top: 2%;
 
