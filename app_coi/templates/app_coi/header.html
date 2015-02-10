@@ -1,77 +1,30 @@
 
 {% load staticfiles %}
+
 <div id="header">
+
 	<div id="navbar">
-
 		<div id="navbar_top">
+			<a id="logo" href="#"><img id="logo_img" src="{% static 'img/logo.jpg' %}" /></a>
 
-
-
-			<div id="navbar_close">
-				<div>
-					<a href="#" class="transparent">
-						<img id="close_icon" src="{% static 'img/close_icon.png' %}" />
-						<span class="navbar_text">CLOSE</span>
-					</a> 
-				</div>
+			<div id="navbar_links">
+				<a href="#" onclick="return false">Contact Us</a>|<a href="#">Directories</a>
 			</div>
-
-
-
-			<div id="navbar_menu">
-				<div>
-					<a href="#" class="on_top">
-						<img id="menu_icon" src="{% static 'img/menu_icon.png' %}" />
-						<span class="navbar_text">MENU</span>
-					</a>
-				</div>
-			</div>
-
-
-
-
-
-
-
-			<div id="navbar_logo">
-				<div>
-					<a href="#"><img id="logo_img" src="{% static 'img/logo.png' %}" /></a>
-				</div>
-			</div>
-
-
-
-
-
-
 
 
 
 			<div id="navbar_search">
-				<div>
-					<a href="#" id="search_link" class="on_top">
-						<img id="search_icon_white" src="{% static 'img/search_icon_white.png' %}" />
-						<span class="navbar_text">SEARCH</span>
-					</a>
-				</div>
+				<a href="#" onclick="return false" id="search_link" class="on_top">
+					<img id="search_box" src="{% static 'img/search_box.jpg' %}" />
+				</a>
 			</div>
-
-
-
-
-
-
-
-
-
-
 
 			<div id="navbar_search_hidden">
 				<div>
 					<div id="search_form" class="transparent">
 						<form autocomplete="off" class="" method="post">
 							{% csrf_token %}
-							<input type="text" id="search_input" name="q" placeholder="Search" value="" />
+							<input type="text" autocomplete="off" id="search_input" name="q" placeholder="Search" value="" />
 							<input id="search_submit" type="submit" value=" " />
 						</form>
 					</div>
@@ -80,111 +33,42 @@
 
 			<div id="search_close" class="transparent">
 				<div>
-					<a href="#">
+					<a href="#" onclick="return false">
 						<img id="search_close_icon" src="{% static 'img/close_icon.png' %}" />
 					</a>
 				</div>
 			</div>
 
-
-
-
-
 		</div>
 
-		<div id="navbar_hidden">
-			<div id="arrow_down"></div>
-		
 
-			<div class="menu_row">
-
-				<ul class="menu_col main">
-					<li class="menu_title">About</li>
-
-
-					<ul class="menu_col sub">
-						<li class="menu_subtitle">About Us</li>
-						<li><a href="#">Introduction</a></li>
-						<li><a href="#">Working Papers</a></li>
-						<li><a href="#">External Links</a></li>
-					</ul>
-
-					<ul class="menu_col sub">
-						<li class="menu_subtitle">Resources</li>
-						<li><a href="#">Maps</a></li>
-						<li><a href="#">A-Z Index</a></li>
-						<li><a href="#">Contact Us</a></li>
-					</ul>
+		<ul id="navbar_bottom">
+			<li id="menu_about"><a href="#" onclick="return false">ABOUT</a>
+				<ul class="menu_col" style="border-right: 1px solid #797979">
+					<li><a href="#" onclick="return false">Who We Are</a></li>
+					<li><a href="#" onclick="return false">Research Papers</a></li>
+					<li><a href="#" onclick="return false">Our Network</a></li>
 				</ul>
-
-
-
-				<ul class="menu_col main">
-					<li class="menu_title">People</li>
-					
-					<ul class="menu_col sub">
-						<li class="menu_subtitle">Board and Staff</li>
-						<li><a href="#">Advisory Board</a></li>
-						<li><a href="#">Faculty and Staff</a></li>
-						<li><a href="#">Visiting Scholars</a></li>
-					</ul>
-
-					<ul class="menu_col sub">
-						<li class="menu_subtitle">Students and Alumni</li>
-						<li><a href="#">Current Students</a></li>
-						<li><a href="#">Alumni</a></li>
-					</ul>
+			<li id="menu_people"><a href="#" onclick="return false">PEOPLE</a>
+				<ul class="menu_col" style="border-right: 1px solid #797979">
+					<li><a href="#" onclick="return false">Faculty and Staff</a></li>
+					<li><a href="#" onclick="return false">Current Students</a></li>
+					<li><a href="#" onclick="return false">Visiting Scholars</a></li>
+					<li><a href="#" onclick="return false">Alumni</a></li>
 				</ul>
-
-			</div>
-
-
-
-
-
-
-			<div class="menu_row">
-
-				<ul class="menu_col main">
-					<li class="menu_title">Projects</li>
-					
-					<ul class="menu_col sub">
-						<li><a href="#">Evolve New York</a></li>
-						<li><a href="#">New Media Spaces</a></li>
-						<li><a href="#">Organizations and Networks</a></li>
-					</ul>
-
-					<ul class="menu_col sub">
-						<li><a href="#">Social Studies of Finance</a></li>
-						<li><a href="#">Technologies of Civil Society</a></li>
-						<li><a href="#">URBZ</a></li>
-					</ul>
+			<li id="menu_projects"><a href="#" onclick="return false">PROJECTS</a>
+				<ul class="menu_col" style="border-right: 1px solid #797979">
+					<li><a href="#" onclick="return false">Coming Soon</a></li>
 				</ul>
+			<li id="menu_events"><a href="#" onclick="return false">EVENTS</a>
+				<ul class="menu_col">
+					<li><a href="#" onclick="return false">CODES Seminar</a></li>
+					<li><a href="#" onclick="return false">Conferences</a></li>
+				</ul>			
+		</ul>
 
 
 
-
-				<ul class="menu_col main">
-					<li class="menu_title">Events</li>
-					
-					<ul class="menu_col sub">
-						<li class="menu_subtitle">Seminars</li>
-						<li><a href="#">Heterarchy Seminar</a></li>
-						<li><a href="#">Gitelson Roundtable</a></li>
-						<li><a href="#">CODES Seminar</a></li>
-					</ul>
-
-					<ul class="menu_col sub">
-						<li class="menu_subtitle">Other Events</li>
-						<li><a href="#">Conferences</a></li>
-						<li><a href="#">Workshops</a></li>
-					</ul>
-				</ul>
-			</div>
-
-
-
-		</div>
 
 	</div>
 

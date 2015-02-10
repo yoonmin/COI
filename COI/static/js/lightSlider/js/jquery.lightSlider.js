@@ -194,41 +194,9 @@
                     $slide.find('.lSAction a').on('click', function (e) {
                         e.preventDefault();
                         if ($(this).attr('class') === 'lSPrev') {
-                            $('#news_col').children().eq(scene-1).find('li').removeClass('active');
-                            $('#news_description').children().eq(scene-1).animate({'right': '1000px'}, 500, function(){});
-                            $('#news_description').children().eq(scene-1).attr('class', 'hidden');
-
                             $el.goToPrevSlide();
-
-                            if (scene == 0) {
-                                $('#news_col').children().last().find('li').addClass('active');
-                                $('#news_description').children().last().animate({'right': '0'}, 500, function(){});
-                                $('#news_description').children().last().attr('class', 'active');
-                            }
-                            else {
-                                $('#news_col').children().eq(scene-1).find('li').addClass('active');
-                                $('#news_description').children().eq(scene-1).animate({'right': '0'}, 500, function(){});
-                                $('#news_description').children().eq(scene-1).attr('class', 'active');
-                            }
-                            
-                            
                         } else {
-                            $('#news_col').children().eq(scene-1).find('li').removeClass('active');
-                            $('#news_description').children().eq(scene-1).animate({'right': '1000px'}, 500, function(){});
-                            $('#news_description').children().eq(scene-1).attr('class', 'hidden');
-                            
                             $el.goToNextSlide();
-
-                            if (scene == 4) {
-                                $('#news_col').children().first().find('li').addClass('active');
-                                $('#news_description').children().first().animate({'right': '0'}, 500, function(){});
-                                $('#news_description').children().first().attr('class', 'active');
-                            }
-                            else {
-                                $('#news_col').children().eq(scene-1).find('li').addClass('active');
-                                $('#news_description').children().eq(scene-1).animate({'right': '0'}, 500, function(){});
-                                $('#news_description').children().eq(scene-1).attr('class', 'active');
-                            }
                         }
                         clearInterval(interval);
                         return false;
@@ -430,7 +398,6 @@
                     var $pager = $cSouter.find('.lSPager').find('li');
                     $pager.first().addClass('active');
                     $pager.on('click', function () {
-
                         if (settings.loop === true && settings.mode === 'slide') {
                             scene = scene + ($pager.index(this) - $cSouter.find('.lSPager').find('li.active').index());
                         } else {
@@ -440,23 +407,7 @@
                         if (settings.gallery === true) {
                             $this.slideThumb();
                         }
-
                         clearInterval(interval);
-
-                        var active = $('#news_description .active');
-                        var current_index = active.index()+1;
-                        if (scene != current_index) {
-                            $("#news_col .active").removeClass("active");
-                            active.animate({'right': '1000px'}, 500, function(){});
-                            active.attr('class', 'hidden');
-                        }
-                        active = $('#news_description').children().eq(scene-1);
-                        if (scene != current_index) {
-                            $('#news_col').children().eq(scene-1).find('li').addClass('active');
-                            active.animate({'right': '0'}, 500, function(){});
-                            active.attr('class', 'active');
-                        } 
-
                         return false;
                     });
                 };
@@ -466,7 +417,7 @@
                         cl = 'lSGallery';
                     }
                     $slide.after('<ul class="lSPager ' + cl + '"></ul>');
-                    var gMargin = "margin-left";
+                    var gMargin = (settings.vertical) ? "margin-left" : "margin-top";
                     $slide.parent().find('.lSPager').css(gMargin, settings.galleryMargin + 'px');
                     refresh.createPager();
                 }
@@ -491,7 +442,7 @@
                         tP = ((tHT) * 100) / elSize;
                     }
                     ob.css({
-                        // 'height': tH + 'px',
+                        'height': tH + 'px',
                         'padding-bottom': tP + '%'
                     });
                 };

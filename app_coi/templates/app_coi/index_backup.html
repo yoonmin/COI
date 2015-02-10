@@ -1,0 +1,196 @@
+{% extends "app_coi/base.html" %}
+
+{% block title %}Welcome to COI{% endblock title %}
+
+{% block content %}
+
+	{% load staticfiles %}
+
+
+
+	<ul id="lightSlider">
+		<li class="slider_content">
+			<img src="{% static 'img/news1.jpg' %}" />
+		</li>
+
+		<li class="slider_content">
+			<img src="{% static 'img/news2.jpg' %}" />
+		</li>
+
+		<li class="slider_content">
+			<img src="{% static 'img/news3.jpg' %}" />
+		</li>
+	</ul>
+
+
+	<div id="news">
+		<a href="#">NEWS &amp; STORIES</a>
+
+		<ul id="news_col">
+			<a href="#"><li class="active"><img src="{% static 'img/news1.jpg' %}" class="news_thumb"><div class="news_thumb_text">
+				<span class="news_title">New Paper: Ethnic Diversity Deflates Price Bubbles</span>
+				</div></li></a>
+
+			<a href="#"><li><img src="{% static 'img/news2.jpg' %}" class="news_thumb"><div class="news_thumb_text">
+				<span class="news_title">New Book:<br>"The Rise of Women"</span>
+				</div></li></a>
+
+			<a href="#"><li><img src="{% static 'img/news3.jpg' %}" class="news_thumb"><div class="news_thumb_text">
+				<span class="news_title">Introducing C.E.L.S.S.</span>
+				</div></li></a>
+
+		</ul>
+	</div>
+
+
+
+
+	<ul id="news_description">
+		<a href="#" class="active"><li>
+			<div class="news_title" style="background-color:#2c9eff">New Paper: Ethnic Diversity Deflates Price Bubbles</div>
+			<div class="news_content">A new paper by David Stark and Sheen Levine finds that price bubbles are less likely to develop in markets comprised of ethnically diverse traders. Ethnic homogeneity promotes conformity and hence mispricing, while diversity leads to greater scrutiny and improved information processing.<br><br><span class="news_click">Click to learn more</span></div>
+		</li></a>
+
+
+
+		<a href="#" class="hidden"><li>
+			<div class="news_title" style="background-color:#b0211d">ISERP Faculty Fellow Thomas DiPrete Examines "The Rise of Women"</div>
+			<div class="news_content">The Rise of Women: The Growing Gender Gap in Education and What it Means for American Schools, by ISERP Faculty Fellow and Giddings Professor of Sociology Thomas DiPrete (Columbia University) and Claudia Buchmann (Ohio State) presents their findings on the gender gap reversal in education, examining in detail why women now outperform men at all levels of school, and suggesting strategies to improve educational outcomes for both genders. Their research indicates that “the most important predictor of boys’ achievement is the extent to which the school culture expects, values, and rewards academic effort."<br><br><span class="news_click">Click to learn more</span></div>
+		</li></a>
+
+
+		<a href="#" class="hidden"><li>
+			<div class="news_title" style="background-color:#ff8400">Columbia Experimental Laboratory for the Social Sciences</div>
+			<div class="news_content">The Columbia Experimental Laboratory for the Social Sciences provides a space for researchers to run computer-based experiments with participants from Columbia University, Barnard, and Columbia alumni.<br><br><span class="news_click">Click to learn more</span></div>
+		</li></a>	
+
+	</ul>
+
+	
+
+
+
+	<div id="index_middle">
+
+		<div id="events">
+			<a href="#" class="events_header">EVENTS</a>
+
+			<ul id="events_col">
+				<li>
+					<div class="event_box">
+						<div class="event_day">
+							Thu.
+						</div>
+						<div class="event_date">
+							Mar. 05
+						</div>
+					</div>
+
+					<div class="event_description">
+						<div class="event_title"><a href="#">
+						Equal by what Measure? Title VII and the Fight to Expand Protective Labor Laws, 1962-1972
+						</a>
+						</div>
+						<div class="event_location">
+						Deborah Dinner (Washington University School of Law)
+						</div>
+					</div>
+				</li>
+
+
+				<li>
+					<div class="event_box">
+						<div class="event_day">
+							Thu.
+						</div>
+						<div class="event_date">
+							Feb. 05
+						</div>
+					</div>
+
+					<div class="event_description">
+						<div class="event_title">
+						<a href="#">
+						Researching Malcolm X at Oxford:<br>Memory and Intent Along the Archival Grain
+						</a>
+						</div>
+						<div class="event_location">
+						Saladin Ambar (Political Science, Lehigh University)
+						</div>
+					</div>
+				</li>
+
+
+
+
+
+				<li>
+					<div class="event_box">
+						<div class="event_day">
+							Thu.
+						</div>
+						<div class="event_date">
+							Dec. 08
+						</div>
+					</div>
+
+					<div class="event_description">
+						<div class="event_title"><a href="#">
+							Claudine Gay (Harvard): Fighting Poverty, Mobilizing Voters: Housing Investment and Political Participation
+						</a>
+						</div>
+						<div class="event_location">
+						Center on African-American Politics and Society
+						</div>
+					</div>
+				</li>
+
+
+			</ul>
+
+			<a href="#" class="see_more">See more events</a>
+
+		</div>
+
+
+
+
+
+
+
+		<div id="index_menu">
+
+			<a href="#">DIRECTORIES</a>
+
+			<div class="menu_row">
+				<a href="#" id="index_about">
+					<img class="index_img" src='{% static 'img/menu_about.jpg' %}'><div class="menu_text">About</div></a>
+				
+				<a href="#" id="index_people">
+					<img class="index_img" src='{% static 'img/menu_people.jpg' %}'><div class="menu_text">People</div></a>
+
+				<a href="#" id="index_resources">
+					<img class="index_img"src='{% static 'img/menu_resources.jpg' %}'><div class="menu_text">Resources</div></a>
+			</div>
+
+			<div class="menu_row">
+				<a href="#" id="index_projects">
+					<img class="index_img" src="{% static 'img/menu_projects.jpg' %}"><div class="menu_text">Projects</div></a>
+
+				<a href="#" id="index_events">
+					<img class="index_img"src='{% static 'img/menu_events.jpg' %}'><div class="menu_text">Events</div></a>
+
+				<a href="#" id="index_research">
+					<img class="index_img"src='{% static 'img/menu_research.jpg' %}'><div class="menu_text">Research</div></a>
+			</div>	
+
+	
+		</div>
+
+
+
+
+	</div>	
+
+
+{% endblock content %}

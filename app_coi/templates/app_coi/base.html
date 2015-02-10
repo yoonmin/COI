@@ -14,31 +14,17 @@
 	<body>
 		{% include "app_coi/header.html" %}
 
+		<div id="main">
+			<div id="content">
+				{% block content %}{% endblock content %}
+			
+			</div>	
 
-		<div id="content">
-			{% block content %}{% endblock content %}
+			{% include "app_coi/footer.html" %}
 		</div>
 
 
-		{% include "app_coi/footer.html" %}
-
-
-
-		<div id="copy_right">
-			&copy; 2015 Columbia University
-			<div id="yoon">Created by Yoon Min</div>
-		</div>
-
-
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-		<script src="http://code.jquery.com/jquery-latest.js"></script>
-		<script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
-		<script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
-
-		<script src="{% static 'js/base.js' %}"></script>
-		<script src="{% static 'js/lightSlider/js/jquery.lightSlider.js' %}"></script>
-		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script src="http://code.jquery.com/jquery-latest.js"></script><script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script><script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script><script src="{% static 'js/base.js' %}"></script><script src="{% static 'js/lightSlider/js/jquery.lightSlider.js' %}"></script>
 
 	</body>	
 </html>
