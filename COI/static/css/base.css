@@ -18,6 +18,11 @@
        url('../fonts/FuturaCnd-Bold.svg#svgFontName') format('svg');
 }
 
+@font-face {
+  font-family: 'Futura-Regular';
+  src: url('../fonts/Futura-Regular.ttf') format('truetype'),
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -43,7 +48,7 @@ a:visited {
 }
 
 html, body {
-  font-family: "Futura";
+  font-family: "Futura-Regular", "Futura";
   width: 100%;
 }
 
@@ -698,7 +703,7 @@ html, body {
 
 
 #footer .footer_col .footer_title {
-  font-family: "Futura", "FuturaCnd-Bold";
+  font-family: "Futura-Regular", "FuturaCnd-Bold";
   font-size: 1.3vw;
   margin-bottom: 20px;
 }
@@ -925,7 +930,7 @@ html, body {
 }
 
 .people_block .people_name {
-	font-family: Futura;
+	font-family: "Futura-Regular", "Futura";
 	margin-bottom: 2%;
 }
 
