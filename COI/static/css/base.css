@@ -911,7 +911,7 @@ html, body {
 
 
 .people_block {
-	overflow: auto;
+	overflow: hidden;
 	margin-bottom: 7%;
 }
 
@@ -975,6 +975,8 @@ html, body {
 .people_block .people_description {
 	font-size: 1vw;
 	text-align: justify;
+	overflow: hidden;
+	overflow: -moz-scrollbars-none;
 }
 
 
