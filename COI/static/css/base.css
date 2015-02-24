@@ -914,6 +914,9 @@ html, body {
 	overflow: hidden;
 	margin-bottom: 7%;
 }
+.peope_block::-webkit-scrollbar { 
+    display: none; 
+}
 
 .people_block .people_block_left {
 	display: inline-block;
