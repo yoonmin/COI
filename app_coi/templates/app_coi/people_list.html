@@ -1,0 +1,38 @@
+{% load staticfiles %}
+{% for person in people_list %}
+
+
+
+	<div class="people_block">
+		<div class="people_block_left">
+			<img class ="people_img" src="{{person.img}}" />
+			
+
+			<div class="icons">
+
+				{% if person.website %}
+					<div class="icon right"><a href="{{person.website}}" target="_blank"><img src="{% static 'img/website_icon.jpg' %}" /></a></div>
+					
+					<div class="icon_divider"></div>	
+				{% endif %}
+				<div class="icon left"><a href="mailto:{{person.email}}" target="_top"><img src="{% static 'img/email_icon.jpg' %}" /></a></div>
+
+
+			</div>
+		</div>
+
+		<div class="people_block_right">
+			{% if person.category %}
+				<div class="people_name">{{person.firstname}} {{person.lastname}}, <span style="font-family: Verdana; font-size: 1vw;">{{person.get_category_display}}</span></div>
+			{% else %}
+				<div class="people_name">{{person.firstname}} {{person.lastname}}</div>
+			{% endif %}
+			<div class="people_description">
+				{{person.description|linebreaksbr}}
+			</div>
+		</div>
+	</div>
+
+
+
+{% endfor %}

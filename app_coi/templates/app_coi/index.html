@@ -10,7 +10,6 @@
 
 
 
-
 	<div id="slider">
 		<ul id="lightSlider">
 			<li class="slider_content">
@@ -23,70 +22,77 @@
 
 			<li class="slider_content">
 				<img src="{% static 'img/index3.jpg' %}" />
-			</li>			
+			</li>
 		</ul>
+
+
+
+
+
+
+		<ul id="slider_description">
+			<li class="slider_box active">
+				<div class="slider_visible">
+					<div class="slider_title">About COI</div>
+					<div class="slider_content">The Center on Organizational Innovation promotes research and experimentation with new forms of collaboration, communication, and coordination afforded by emerging interactive technologies</div>
+					<ul class="slider_hidden">
+						<li><a href="#" onclick="return false">Who We Are<span>>></span></a>
+						<li><a href="#" onclick="return false">Research Papers<span>>></span></a>
+						<li><a href="#" onclick="return false">Our Network<span>>></span></a>
+					</ul>
+				</div>
+
+				<ul class="pager">
+					<li class="page active"><a href="#" onclick="return false">1</a>
+					<li class="page"><a href="#" onclick="return false">2</a>
+					<li class="page"><a href="#" onclick="return false">3</a>
+				</ul>
+			</li>
+
+
+			<li class="slider_box hidden">
+				<div class="slider_visible">
+					<div class="slider_title">COI People</div>
+					<div class="slider_content">COI researchers represent multiple disciplines including organizational and cultural studies, anthropology, architecture, business, communications, urban planning, and science studies</div>
+					<ul class="slider_hidden">
+						<li><a href="#" onclick="return false">Faculty and Staff<span>>></span></a>
+						<li><a href="#" onclick="return false">Current Students<span>>></span></a>
+						<li><a href="#" onclick="return false">Visiting Scholars<span>>></span></a>
+						<li><a href="#" onclick="return false">Alumni<span>>></span></a>
+					</ul>
+				</div>
+
+				<ul class="pager">
+					<li class="page active"><a href="#" onclick="return false">1</a>
+					<li class="page"><a href="#" onclick="return false">2</a>
+					<li class="page"><a href="#" onclick="return false">3</a>
+				</ul>
+			</li>
+
+
+
+
+			<li class="slider_box hidden">
+				<div class="slider_visible">
+					<div class="slider_title">COI Events</div>
+					<div class="slider_content">The Institute's core mission is to catalyze and produce pioneering social science research and to shape public policy by integrating knowledge and methods across the social science disciplines.</div>
+					<ul class="slider_hidden">
+						<li><a href="#" onclick="return false">CODES Seminar<span>>></span></a>
+						<li><a href="#" onclick="return false">Conferences<span>>></span></a>
+					</ul>
+				</div>
+
+				<ul class="pager">
+					<li class="page active"><a href="#" onclick="return false">1</a>
+					<li class="page"><a href="#" onclick="return false">2</a>
+					<li class="page"><a href="#" onclick="return false">3</a>
+				</ul>
+			</li>		
+		</ul>
+
 	</div>
 
 
-	<ul id="slider_description">
-		<li class="slider_box active">
-			<div class="slider_visible">
-				<div class="slider_title">About COI</div>
-				<div class="slider_content">The Center on Organizational Innovation promotes research and experimentation with new forms of collaboration, communication, and coordination afforded by emerging interactive technologies</div>
-				<ul class="slider_hidden">
-					<li><a href="#" onclick="return false">Who We Are<span>>></span></a>
-					<li><a href="#" onclick="return false">Research Papers<span>>></span></a>
-					<li><a href="#" onclick="return false">Our Network<span>>></span></a>
-				</ul>
-			</div>
-
-			<ul class="pager">
-				<li class="page active"><a href="#" onclick="return false">1</a>
-				<li class="page"><a href="#" onclick="return false">2</a>
-				<li class="page"><a href="#" onclick="return false">3</a>
-			</ul>
-		</li>
-
-
-		<li class="slider_box hidden">
-			<div class="slider_visible">
-				<div class="slider_title">COI People</div>
-				<div class="slider_content">COI researchers represent multiple disciplines including organizational and cultural studies, anthropology, architecture, business, communications, urban planning, and science studies</div>
-				<ul class="slider_hidden">
-					<li><a href="#" onclick="return false">Faculty and Staff<span>>></span></a>
-					<li><a href="#" onclick="return false">Current Students<span>>></span></a>
-					<li><a href="#" onclick="return false">Visiting Scholars<span>>></span></a>
-					<li><a href="#" onclick="return false">Alumni<span>>></span></a>
-				</ul>
-			</div>
-
-			<ul class="pager">
-				<li class="page active"><a href="#" onclick="return false">1</a>
-				<li class="page"><a href="#" onclick="return false">2</a>
-				<li class="page"><a href="#" onclick="return false">3</a>
-			</ul>
-		</li>
-
-
-
-
-		<li class="slider_box hidden">
-			<div class="slider_visible">
-				<div class="slider_title">COI Events</div>
-				<div class="slider_content">The Institute's core mission is to catalyze and produce pioneering social science research and to shape public policy by integrating knowledge and methods across the social science disciplines.</div>
-				<ul class="slider_hidden">
-					<li><a href="#" onclick="return false">CODES Seminar<span>>></span></a>
-					<li><a href="#" onclick="return false">Conferences<span>>></span></a>
-				</ul>
-			</div>
-
-			<ul class="pager">
-				<li class="page active"><a href="#" onclick="return false">1</a>
-				<li class="page"><a href="#" onclick="return false">2</a>
-				<li class="page"><a href="#" onclick="return false">3</a>
-			</ul>
-		</li>		
-	</ul>
 
 
 
@@ -94,25 +100,23 @@
 
 
 	<ul id="index_middle">
-		<ul id="index_menus">
-			<a href="#" onclick="return false" class="menu_box" style="background-color: #3b759c"><li><img src="{% static 'img/box_about.jpg' %}"><div class="box_title">ABOUT</div></li></a>
-			<a href="#" onclick="return false" class="menu_box" style="background-color: #90382e"><li><img src="{% static 'img/box_people.jpg' %}"><div class="box_title">PEOPLE</div></li></a>
-			<a href="#" onclick="return false" class="menu_box" style="background-color: #c36613"><li><img src="{% static 'img/box_projects.jpg' %}"><div class="box_title">PROJECTS</div></li></a>
-			<a href="#" onclick="return false" class="menu_box" style="background-color: #8a9140"><li><img src="{% static 'img/box_events.jpg' %}"><div class="box_title">EVENTS</div></li></a>
-		
-		</ul><ul id="index_links">
+		<div id="index_menus">
+			<a href="{% url 'about' %}" class="menu_box" style="background-color: #8a9140"><img src="{% static 'img/box_about.jpg' %}"><div class="box_title">ABOUT</div></a>
+			<a href="{% url 'faculty' %}" class="menu_box" style="background-color: #3b759c"><img src="{% static 'img/box_people.jpg' %}"><div class="box_title">PEOPLE</div></a>
+			<a href="#" onclick="return false" class="menu_box" style="background-color: #90382e"><img src="{% static 'img/box_projects.jpg' %}"><div class="box_title">PROJECTS</div></a>
+			<a href="{% url 'event' %}" onclick="return false" class="menu_box" style="background-color: #c36613"><img src="{% static 'img/box_events.jpg' %}"><div class="box_title">EVENTS</div></a>
+		</div><ul id="index_links">
 			<li class="link">
-				<a href="#" onclick="return false"><img src="{% static 'img/ISERP_Link.jpg' %}" /></a>
+				<a href="http://iserp.columbia.edu" target="_blank"><img src="{% static 'img/ISERP_Link.jpg' %}" /></a>
 			</li>
 			<li class="link">
-				<a href="#" onclick="return false"><img src="{% static 'img/Dissonance_Link.jpg' %}" /></a>
+				<a href="http://www.thesenseofdissonance.com" target="_blank"><img src="{% static 'img/Dissonance_Link.jpg' %}" /></a>
 			</li>
 			<li class="other_link"><a href="#" onclick="return false">OTHER LINKS >></a>
 		</ul>
 	</ul>
 
 
-</div>
 
 
 {% endblock content %}

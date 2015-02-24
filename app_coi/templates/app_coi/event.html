@@ -1,0 +1,44 @@
+{% extends "app_coi/base.html" %}
+
+{% block title %}Welcome to COI{% endblock title %}
+
+{% block content %}
+
+
+{% load staticfiles %}
+
+
+<div class="menubar" id="menubar_events">
+	<div class="menubar_title">COI EVENTS</div>
+
+	<div class="menubar_text">
+		The Institute's core mission is to catalyze and produce pioneering social science research and to shape public policy by integrating knowledge and methods across the social science disciplines
+	</div>
+</div>
+
+
+<ul class="menubar_list" id="event">
+	<img class="menubar_img" src="{% static 'img/box_events.jpg' %}">
+	<a href="{% url 'event' %}" style="color: #c36613"><li>CODES Seminar</li></a>
+	<li class="dashed_line"></li>
+	<a href="#"><li>Conferences</li></a>
+</ul>
+
+
+<div class="menubar_content">
+
+<h2 style="color: #c36613; font-family:'Lusitana-Bold'">CODES Seminar</h2><br>
+
+<p>
+ Each month some 20 affiliated graduate students from multiple disciplines convene to present their research at a Collaborative Organization and Digital Ecologies (CODES) Seminar. Some students are involved in COI research projects while others are conducting their own related research. Past seminars have highlighted research on on-line support groups for cancer patients, accountability practices of non-profit technology assistance providers, new forms of community among adolescents through instant-messaging, the gender of work in the software industry, organizational responses to environmental uncertainty in New York new media industry, distributed cognition in Wall Street trading rooms, and the implications of the Internet for work life and politics.
+</p>
+
+</div>
+
+
+
+
+
+
+
+{% endblock content %}

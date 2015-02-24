@@ -1,0 +1,86 @@
+
+{% load staticfiles %}
+
+
+
+<div id="navbar">
+
+	<div id="navbar_top">
+		
+		<a id="logo" href="{% url 'index' %}"><img id="logo_img" src="{% static 'img/logo.jpg' %}" /></a>
+
+
+		<div id="navbar_links">
+			<a href="#">Contact Us</a>|<a href="#">Directories</a>
+		</div>
+
+
+
+		<div id="navbar_search">
+			<a href="#" id="search_link" class="on_top">
+				<img id="search_box" src="{% static 'img/search_box.jpg' %}" />
+			</a>
+		</div>
+
+		<div id="navbar_search_hidden">
+			<div>
+				<div id="search_form" class="transparent">
+					<form autocomplete="off" class="" method="post">
+						{% csrf_token %}
+						<input type="text" autocomplete="off" id="search_input" name="q" placeholder="Search" value="" />
+						<input id="search_submit" type="submit" value=" " />
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div id="search_close" class="transparent">
+			<div>
+				<a href="#">
+					<img id="search_close_icon" src="{% static 'img/close_icon.png' %}" />
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+	<ul id="navbar_bottom">
+		<a href="{% url 'about' %}"><li class="navbar_submenu" id="menu_about">ABOUT</a>
+			<ul class="menu_col" style="border-right: 1px solid #797979">
+				<a href="{% url 'about' %}"><li>Who We Are</li></a>
+				<a href="#" onclick="return false"><li>Research Papers</li></a>
+				<a href="#" onclick="return false"><li>Our Network</li></a>
+			</ul>
+		<a href="{% url 'faculty' %}"><li class="navbar_submenu" id="menu_people">PEOPLE</a>
+			<ul class="menu_col" style="border-right: 1px solid #797979">
+				<a href="{% url 'faculty' %}"><li>Faculty and Staff</li></a>
+				<a href="{% url 'student' %}"><li>Current Students</li></a>
+				<a href="{% url 'scholar' %}"><li>Visiting Scholars</li></a>
+				<a href="{% url 'alumni' %}"><li>Alumni</li></a>
+			</ul>
+		<a href="#"><li class="navbar_submenu" id="menu_projects">PROJECTS</a>
+			<ul class="menu_col" style="border-right: 1px solid #797979">
+				<a href="#" onclick="return false"><li>Coming Soon</li></a>
+			</ul>
+		<a href="{% url 'event' %}"><li class="navbar_submenu" id="menu_events">EVENTS</a>
+			<ul class="menu_col">
+				<a href="{% url 'event' %}"><li>CODES Seminar</li></a>
+				<a href="#" onclick="return false"><li>Conferences</li></a>
+			</ul>			
+	</ul>
+
+
+
+
+
+
+</div>
+
+

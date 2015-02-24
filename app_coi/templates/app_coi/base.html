@@ -4,27 +4,26 @@
 		<title>
 			{% block title %}{% endblock title %}
 		</title>
-		{% block external %}
 			{% load staticfiles %}
-			<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+			<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
 			<link type="text/css" rel="stylesheet" href="{% static 'js/lightSlider/css/lightSlider.css' %}" />
-		{% endblock external %}
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script src="http://code.jquery.com/jquery-latest.js"></script><script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script><script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script><script src="{% static 'js/base.js' %}"></script><script src="{% static 'js/lightSlider/js/jquery.lightSlider.js' %}"></script>
+			{% block external %}{% endblock external %}
 	</head>
 
-	<body>
-		{% include "app_coi/header.html" %}
 
+	<body>
+		{% include "app_coi/navbar.html" %}
+		
 		<div id="main">
 			<div id="content">
 				{% block content %}{% endblock content %}
-			
-			</div>	
+			</div>
 
 			{% include "app_coi/footer.html" %}
 		</div>
+	</body>
 
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script src="http://code.jquery.com/jquery-latest.js"></script><script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script><script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script><script src="{% static 'js/base.js' %}"></script><script src="{% static 'js/lightSlider/js/jquery.lightSlider.js' %}"></script>
-
-	</body>	
+	
 </html>

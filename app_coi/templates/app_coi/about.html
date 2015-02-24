@@ -1,0 +1,50 @@
+{% extends "app_coi/base.html" %}
+
+{% block title %}Welcome to COI{% endblock title %}
+
+{% block content %}
+
+
+{% load staticfiles %}
+
+
+<div class="menubar" id="menubar_about">
+	<div class="menubar_title">ABOUT COI</div>
+
+	<div class="menubar_text">
+		The Center on Organizational Innovation promotes research and experimentation with new forms of collaboration, communication, and coordination afforded by emerging interactive technologies
+	</div>
+</div>
+
+
+<ul class="menubar_list" id="about">
+	<img class="menubar_img" src="{% static 'img/box_about.jpg' %}">
+	<a href="{% url 'faculty' %}" style="color: #8a9140"><li>Who We Are</li></a>
+	<li class="dashed_line"></li>
+	<a href="#"><li>Research Papers</li></a>
+	<li class="dashed_line"></li>
+	<a href="#"><li>Our Network</li></a>
+</ul>
+
+
+<div class="menubar_content">
+
+<h2 style="color: #8a9140; font-family:'Lusitana-Bold'">Who We Are</h2><br>
+
+<p>The Center on Organizational Innovation promotes research and experimentation with new forms of collaboration, communication, and coordination afforded by emerging interactive technologies.At mid-century, organizational analysts at Columbia University, including Peter Blau, Alvin Gouldner, Paul Lazarsfeld, and Robert Merton, charted the rise of bureaucratic organizations and the emergence of mass communication through case studies of work groups and the demographics of audience reception. In our new century, we chart the emergence of collaborative organizational forms in an era when social interaction moves seamlessly between encounters face to face and at the digital interface.</p>
+<br>
+<p>The social engineers of the collaborative age are software engineers, interactive designers, and information architects; a critical social science perspective suggests that realizing the innovative potential of the new interactive media will require extending design capabilities to communities of users in a process of emergent design.</p>
+<br>
+<p>COI researchers represent multiple disciplines including organizational and cultural studies, anthropology, architecture, business, communications, urban planning, and science studies. COI is a part of Columbia's Institute for Social and Economic Research and Policy. The Institute's core mission is to catalyze and produce pioneering social science research and to shape public policy by integrating knowledge and methods across the social science disciplines.</p>
+<br>
+
+
+</div>
+
+
+
+
+
+
+
+{% endblock content %}
