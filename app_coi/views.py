@@ -71,11 +71,6 @@ class StudentView(ListView):
 
 
 
-
-
-
-
-
 class ScholarView(ListView):
 	model = VisitingScholar
 	template_name = 'app_coi/scholar.html'
