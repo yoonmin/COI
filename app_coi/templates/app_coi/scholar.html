@@ -8,50 +8,43 @@
 {% load staticfiles %}
 
 
-<div class="menubar" id="menubar_people">
-	<div class="menubar_title">COI PEOPLE</div>
+<div class ="page_content">
 
-	<div class="menubar_text">
-		COI researchers represent multiple disciplines including organizational and cultural studies, anthropology, architecture, business, communications, urban planning, and science studies
-	</div>
-</div>
-
-
-<ul class="menubar_list" id="people">
-	<img class="menubar_img" src="{% static 'img/box_people.jpg' %}">
-	<a href="{% url 'faculty' %}"><li>Faculty and Staff</li></a>
-	<li class="dashed_line"></li>
-	<a href="{% url 'student' %}"><li>Current Students</li></a>
-	<li class="dashed_line"></li>
-	<a href="{% url 'scholar' %}" style="color: #3b759c"><li>Visiting Scholars</li></a>
-	<li class="dashed_line"></li>
-	<a href="{% url 'alumni' %}"><li>Alumni</li></a>
-</ul>
-
-
-<div class="menubar_content">
-
-
-	<form autocomplete="off" id="people_search" method="post" action="">
-		{% csrf_token %}
-		<div id="people_search_title">Search Scholar</div>
-		<div id="input_wrapper">
-			<input type="text" id="people_input" name="q" placeholder="Type First or Last Name"/>
-		</div>
-		<img id="people_submit" src="{% static 'img/search_icon_black.png' %}" />
-	</form>	
-
-	<ul class="menubar_tabbed_menu">
-		<li><a href="" onclick="return false" class="menubar_tab current" data-tab="current">Current Visiting Scholars</a><li><a href="" onclick="return false" class="menubar_tab" data-tab="past">Past Visiting Scholars</a>
+	<ul class="menubar_list" id="people">
+		<img class="menubar_img" src="{% static 'img/box_people.jpg' %}">
+		<a href="{% url 'faculty' %}"><li>Faculty and Staff</li></a>
+		<li class="dashed_line"></li>
+		<a href="{% url 'student' %}"><li>Current Students</li></a>
+		<li class="dashed_line"></li>
+		<a href="{% url 'scholar' %}" style="color: #3b759c"><li>Visiting Scholars</li></a>
+		<li class="dashed_line"></li>
+		<a href="{% url 'alumni' %}"><li>Alumni</li></a>
 	</ul>
 
-	<div class="menubar_tabbed_content">
-		{% include "app_coi/people_list.html" %}
+
+	<div class="menubar_content">
+
+
+		<form autocomplete="off" id="people_search" method="post" action="">
+			{% csrf_token %}
+			<div id="people_search_title">Search Scholar</div>
+			<div id="input_wrapper">
+				<input type="text" id="people_input" name="q" placeholder="Type First or Last Name"/>
+			</div>
+			<img id="people_submit" src="{% static 'img/search_icon_black.png' %}" />
+		</form>	
+
+		<ul class="menubar_tabbed_menu">
+			<li><a href="" onclick="return false" class="menubar_tab current" data-tab="current">Current Visiting Scholars</a><li><a href="" onclick="return false" class="menubar_tab" data-tab="past">Past Visiting Scholars</a>
+		</ul>
+
+		<div class="menubar_tabbed_content">
+			{% include "app_coi/people_list.html" %}
+		</div>
+
+
 	</div>
-
-
 </div>
-
 
 <script src="{% static 'js/search.js' %}"></script>
 <script src="{% static 'js/tab.js' %}"></script>

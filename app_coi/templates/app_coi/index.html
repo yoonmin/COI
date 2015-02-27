@@ -101,10 +101,10 @@
 
 	<ul id="index_middle">
 		<div id="index_menus">
-			<a href="{% url 'about' %}" class="menu_box" style="background-color: #8a9140"><img src="{% static 'img/box_about.jpg' %}"><div class="box_title">ABOUT</div></a>
-			<a href="{% url 'faculty' %}" class="menu_box" style="background-color: #3b759c"><img src="{% static 'img/box_people.jpg' %}"><div class="box_title">PEOPLE</div></a>
-			<a href="#" onclick="return false" class="menu_box" style="background-color: #90382e"><img src="{% static 'img/box_projects.jpg' %}"><div class="box_title">PROJECTS</div></a>
-			<a href="{% url 'event' %}" class="menu_box" style="background-color: #c36613"><img src="{% static 'img/box_events.jpg' %}"><div class="box_title">EVENTS</div></a>
+			<a href="{% url 'about' %}" class="menu_box" style="background-color: #8a9140"><div class="box_title">ABOUT</div></a>
+			<a href="{% url 'faculty' %}" class="menu_box" style="background-color: #3b759c"><div class="box_title">PEOPLE</div></a>
+			<a href="#" onclick="return false" class="menu_box" style="background-color: #90382e"><div class="box_title">PROJECTS</div></a>
+			<a href="{% url 'event' %}" class="menu_box" style="background-color: #c36613"><div class="box_title">EVENTS</div></a>
 		</div><ul id="index_links">
 			<li class="link">
 				<a href="http://iserp.columbia.edu" target="_blank"><img src="{% static 'img/ISERP_Link.jpg' %}" /></a>
@@ -112,9 +112,18 @@
 			<li class="link">
 				<a href="http://www.thesenseofdissonance.com" target="_blank"><img src="{% static 'img/Dissonance_Link.jpg' %}" /></a>
 			</li>
-			<li class="other_link"><a href="#" onclick="return false">OTHER LINKS >></a>
 		</ul>
 	</ul>
+
+
+	<script type="text/javascript" language="javascript">
+		$(".menu_box").hover(
+			function() {
+				$(this).find(".box_title").effect("shake", {distance:5, times:1}, 100);
+			},
+			function() {}
+		);
+	</script>
 
 
 
