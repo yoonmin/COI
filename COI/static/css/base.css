@@ -53,6 +53,8 @@ html, body {
 }
 
 
+
+
 .loading_img {
 	background-image: url("../img/loading.gif");
 	background-repeat: no-repeat;
@@ -79,6 +81,7 @@ html, body {
 
 
 
+
 #navbar {
   position: absolute;
   left: 0; right: 0; top: 3%;
@@ -100,7 +103,7 @@ html, body {
   top: 0; bottom: 0;
   margin: auto 0;
   margin-left: 3%;
-  height: 50%;
+  width: 33%;
 }
 
 
@@ -922,3 +925,91 @@ html, body {
 
 
 
+
+/* IPad */
+@media screen and (max-width : 1024px) {
+  #main {
+    margin-top: 17%;
+  }
+  #navbar > #navbar_bottom .navbar_submenu {
+    background: none;
+  }
+  #navbar #navbar_search > #search_link #search_box {
+    height: 15%;
+  }
+  #footer {
+    margin-top: 0;
+  }
+  #index_middle {
+    margin-bottom: 0;
+  }
+  #navbar #navbar_search_hidden > div > #search_form #search_submit {
+    right: 7px;
+  }
+}
+@media screen and (max-width : 768px) {
+  #navbar {
+    height: 6.5%;
+  }
+  #navbar > #navbar_bottom {
+    height: 40%;
+  }
+  #navbar > #navbar_bottom .navbar_submenu {
+    background: none;
+  }
+  #navbar #navbar_search > #search_link #search_box {
+    height: 25%;
+  }
+  #footer {
+    margin-top: 0;
+  }
+  #index_middle {
+    margin-bottom: 0;
+  }  
+
+  #navbar #navbar_search_hidden > div > #search_form { 
+    height: 35%;
+  }
+
+  #navbar #navbar_search_hidden > div > #search_form #search_input {
+    margin-top: 2px;
+  }
+  #navbar #navbar_search_hidden > div > #search_form #search_submit {
+    top: 18%;
+    right: 8px;
+  }
+} 
+
+
+
+/* Iphone */
+@media screen and (max-width : 375px) { 
+  #navbar #search_close {
+    top: 20%;
+  }
+  #navbar > #navbar_top #navbar_search { 
+    top: 33%;
+  }
+  #navbar #navbar_search > #search_link #search_box {
+    height: 18%;
+  }
+  #footer {
+    margin-top: 0;
+  }
+
+  #navbar #navbar_search_hidden > div > #search_form { 
+    height: 35%;
+  }
+
+  #navbar #navbar_search_hidden > div > #search_form #search_input {
+    margin-top: 2px;
+  }
+  #navbar #navbar_search_hidden > div > #search_form #search_submit {
+    top: 18%;
+    right: 5px;
+  }  
+}
+
+@media screen and (max-width : 667px) { 
+
+}
