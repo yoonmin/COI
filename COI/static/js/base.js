@@ -142,7 +142,7 @@ $(document).ready(function() {
         vertical:true,
         galleryMargin: 10,
         // verticalHeight: 200,
-        vThumbWidth: 165,
+        vThumbWidth: "14%",
         item:1,
         thumbItem:4,
         slideMargin:0,

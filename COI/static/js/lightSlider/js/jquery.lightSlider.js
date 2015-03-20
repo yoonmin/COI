@@ -231,6 +231,7 @@
                     $slide.parent().addClass('vertical');
                     elSize = settings.verticalHeight;
                     $slide.css('height', elSize + 'px');
+                    $slide.css('width', '85%');
                 } else {
                     elSize = $el.outerWidth();
                 }
@@ -383,7 +384,7 @@
                     if (settings.gallery === true) {
                         if (settings.vertical === true) {
                             // set Gallery thumbnail width
-                            $cSouter.find('.lSPager').css('width', settings.vThumbWidth + 'px');
+                            $cSouter.find('.lSPager').css('width', settings.vThumbWidth);
                         }
                         pagerWidth = (i * (settings.thumbMargin + thumbWidth)) + 0.5;
                         $cSouter.find('.lSPager').css({

@@ -108,6 +108,7 @@
 
 /** Gallery */
 .lSSlideOuter .lSPager.lSGallery {
+    /*width: 50%;*/
     list-style: none outside none;
     padding-left: 0;
     margin: 0;
