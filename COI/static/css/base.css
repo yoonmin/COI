@@ -14,13 +14,20 @@
   font-family: 'FuturaCnd-Bold';
   src: url('../fonts/FuturaCnd-Bold.otf') format('opentype'),
        url('../fonts/FuturaCnd-Bold.woff') format('woff'),
+       url('../fonts/FuturaCnd-Bold.woff2') format('woff2'),
+       url('../fonts/FuturaCnd-Bold.eot'),
        url('../fonts/FuturaCnd-Bold.ttf') format('truetype'),
        url('../fonts/FuturaCnd-Bold.svg#svgFontName') format('svg');
 }
 
 @font-face {
   font-family: 'Futura-Regular';
-  src: url('../fonts/Futura-Regular.ttf') format('truetype'),
+  src: url('../fonts/FuturaCnd-Regular.otf') format('opentype'),
+       url('../fonts/FuturaCnd-Regular.woff') format('woff'),
+       url('../fonts/FuturaCnd-Regular.woff2') format('woff2'),
+       url('../fonts/FuturaCnd-Regular.eot'),
+       url('../fonts/FuturaCnd-Regular.ttf') format('truetype'),
+       url('../fonts/FuturaCnd-Regular.svg#svgFontName') format('svg')
 }
 
 * {
