@@ -232,6 +232,7 @@
                     // elSize = settings.verticalHeight;
                     // $slide.css('height', elSize + 'px');
                     $slide.css('width', '85%');
+                    $slide.css('height', $slide.css('width')*0.51367);
                 } else {
                     elSize = $el.outerWidth();
                 }
