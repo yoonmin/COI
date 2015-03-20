@@ -1,0 +1,79 @@
+{% extends "app_coi/base.html" %}
+
+{% block title %}Welcome to COI{% endblock title %}
+
+{% block content %}
+
+
+{% load staticfiles %}
+
+<div class ="page_content">
+
+
+	<ul class="menubar_list" id="about">
+		<img class="menubar_img" src="{% static 'img/box_about.jpg' %}">
+		<a href="{% url 'about' %}"><li>Who We Are</li></a>
+		<li class="dashed_line"></li>
+		<a href="#"  style="color: #8a9140"><li>Research Papers</li></a>
+		<li class="dashed_line"></li>
+		<a href="{% url 'featured' %}"><li>Featured COI People</li></a>
+	</ul>
+
+	<div class="menubar_content">
+
+	<h2 style="color: #8a9140; font-family:'Lusitana-Bold'">Research Papers</h2><br>
+
+	
+
+	<form autocomplete="off" id="title_search" method="get" action="">
+		{% csrf_token %}
+		<div id="paper_search_title">Search by Title</div>
+		<div>
+			<img id="paper_submit" src="{% static 'img/search_icon_black.png' %}" />
+			<input type="text" id="title_input" class="form_input" name="title" placeholder="Enter Title"/>
+		</div>
+	</form>	
+
+
+	<form autocomplete="off" id="author_search" method="get" action="">
+		{% csrf_token %}
+		<div id="paper_search_title">Search by Author(s)</div>
+		<div>
+			<img id="paper_submit" src="{% static 'img/search_icon_black.png' %}" />
+			<input type="text" id="author_input" class="form_input" name="author" placeholder="Enter Author(s)"/>
+		</div>
+	</form>	
+
+
+	<div id="paper_result">
+
+		{% include 'app_coi/paper_list.html' %}
+
+	</div>
+
+
+	</div>
+
+
+
+</div>
+
+
+<script src="{% static 'js/search.js' %}"></script>
+<script type="text/javascript" language="javascript">
+	$(".abstract_link").click(
+		function() {
+			$(this).parent().find(".paper_abstract").slideToggle();
+
+			if ($(this).find("span").html().indexOf("Abstract") >= 0) {
+				$(this).find("span").html("&#9660; Hide ");
+			}
+			else {
+				$(this).find("span").html("&#9658; Abstract ");
+			}
+		}
+	);
+</script>
+
+
+{% endblock content %}

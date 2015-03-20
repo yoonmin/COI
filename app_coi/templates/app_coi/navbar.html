@@ -11,7 +11,7 @@
 
 
 		<div id="navbar_links">
-			<a href="#">Contact Us</a>
+			<a href="{% url 'contact' %}">Contact Us</a>
 		</div>
 
 
@@ -27,7 +27,7 @@
 				<div id="search_form" class="transparent">
 					<form autocomplete="off" class="" method="post">
 						{% csrf_token %}
-						<input type="text" autocomplete="off" id="search_input" name="q" placeholder="Search" value="" />
+						<input type="text" autocomplete="off" id="search_input" name="search" placeholder="Search" value="" />
 						<input id="search_submit" type="submit" value=" " />
 					</form>
 				</div>
@@ -55,15 +55,14 @@
 		<a href="{% url 'about' %}"><li class="navbar_submenu" id="menu_about">ABOUT</a>
 			<ul class="menu_col" style="border-right: 1px solid #797979">
 				<a href="{% url 'about' %}"><li>Who We Are</li></a>
-				<a href="#" onclick="return false"><li>Research Papers</li></a>
-				<a href="#" onclick="return false"><li>Our Network</li></a>
+				<a href="{% url 'papers' %}"><li>Research Papers</li></a>
+				<a href="{% url 'featured' %}"><li>Featured COI People</li></a>
 			</ul>
 		<a href="{% url 'faculty' %}"><li class="navbar_submenu" id="menu_people">PEOPLE</a>
 			<ul class="menu_col" style="border-right: 1px solid #797979">
 				<a href="{% url 'faculty' %}"><li>Faculty and Staff</li></a>
 				<a href="{% url 'student' %}"><li>Current Students</li></a>
 				<a href="{% url 'scholar' %}"><li>Visiting Scholars</li></a>
-				<a href="{% url 'alumni' %}"><li>Alumni</li></a>
 			</ul>
 		<a href="#"><li class="navbar_submenu" id="menu_projects">PROJECTS</a>
 			<ul class="menu_col" style="border-right: 1px solid #797979">

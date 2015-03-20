@@ -115,11 +115,10 @@ $(document).ready(function() {
 		timeout: 0,
 		out: function() { $(this).find(".slider_hidden").slideUp("0"); },
 	};
-	$(".slider_visible").hoverIntent(config);
+	$(".slider_box").hoverIntent(config);
 
 
     var slider = $("#lightSlider").lightSlider({
-    	item: 1,
     	mode: "slide",
     	useCSS: true,
     	cssEasing: 'ease',
@@ -129,9 +128,29 @@ $(document).ready(function() {
     	loop: true,
 
     	controls: false,
-    	pager: false,
+    	// pager: false,
+        enableDrag: false,
+        enableTouch: false,
+        keyPress: false,
+        
+        gallery:true,
+        vertical:true,
+        galleryMargin: 10,
+        // verticalHeight: 200,
+        vThumbWidth: 165,
+        item:1,
+        thumbItem:4,
+        slideMargin:0,
+        currentPagerPosition:'left',
+        onSliderLoad: function(plugin) {
+            plugin.lightGallery();
+        }
+
     });
     
+
+
+
 
 
 

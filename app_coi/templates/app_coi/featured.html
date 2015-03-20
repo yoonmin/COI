@@ -1,0 +1,82 @@
+{% extends "app_coi/base.html" %}
+
+{% block title %}Welcome to COI{% endblock title %}
+
+{% block content %}
+
+
+{% load staticfiles %}
+
+<div class ="page_content">
+
+
+	<ul class="menubar_list" id="about">
+		<img class="menubar_img" src="{% static 'img/box_about.jpg' %}">
+		<a href="{% url 'about' %}"><li>Who We Are</li></a>
+		<li class="dashed_line"></li>
+		<a href="#"><li>Research Papers</li></a>
+		<li class="dashed_line"></li>
+		<a href="{% url 'featured' %}" style="color: #8a9140"><li>Featured COI People</li></a>
+	</ul>
+
+
+	<div class="menubar_content">
+
+	<h2 style="color: #8a9140; font-family:'Lusitana-Bold'">Featured COI People</h2><br>
+
+
+	<div class="featured_list">
+		{% for featured in featured_list %}
+
+			<div class="featured_preview_img">
+				<a href="featured/{{featured.name|slugify}}">
+					<img src="media/{{featured.thumb}}" />
+
+					<div class="box_hidden">
+						{% if featured.category != 'Interview' %}
+							<i>{{featured.category}}:</i><br>
+						{% endif %}
+						{{featured.name}}
+					</div>
+				</a>
+			</div>
+
+
+			<div class="featured_preview_description">
+				<div class="featured_summary">
+
+				{% if featured.category != 'Interview' %}
+					<h2 style="font-family:'Lusitana-Bold'">{{featured.category}}:</h2>
+				{% endif %}
+
+				<h1 style="color: #8a9140; font-family:'Lusitana-Bold'">{{featured.name}}</h1><br>
+
+					{{featured.summary}}
+					<br><br>
+					<a href="featured/{{featured.name|slugify}}">Click to learn more</a>
+				</div>
+			</div>
+
+		{% endfor %}
+	</div>
+
+
+
+	</div>
+
+
+
+</div>
+
+	<script type="text/javascript" language="javascript">
+		$(".featured_preview_img").hover(
+			function() {
+				$(this).find(".box_hidden").slideDown();
+			},
+			function() {
+				$(this).find(".box_hidden").slideUp();
+			}
+		);
+	</script>
+
+{% endblock content %}

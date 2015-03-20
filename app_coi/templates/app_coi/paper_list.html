@@ -1,0 +1,12 @@
+{% load staticfiles %}
+{% for paper in paper_list %}
+	<div class="paper">
+		<div class="paper_title"><b>{{paper.title}}</b></div>
+		<div class="paper_author"><i>{{paper.author}}</i>, {{paper.date}}</div>
+		<a class="abstract_link" href="#" onclick="return false"><span>&#9658; Abstract </span><img class="paper_icon" src="{% static 'img/abstract_icon.png' %}"></a> | <a class="pdf_link" href="media/{{paper.pdf}}" target="_blank">Full Paper <img class="paper_icon" src="{% static 'img/pdf_icon.png' %}"></a>
+
+		<div class="paper_abstract">
+			{{paper.abstract}}
+		</div>
+	</div>
+{% endfor %}

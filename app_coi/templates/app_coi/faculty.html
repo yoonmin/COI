@@ -14,11 +14,10 @@
 		<img class="menubar_img" src="{% static 'img/box_people.jpg' %}">
 		<a href="{% url 'faculty' %}" style="color: #3b759c"><li>Faculty and Staff</li></a>
 		<li class="dashed_line"></li>
-		<a href="{% url 'student' %}"><li>Current Students</li></a>
+		<a href="{% url 'student' %}"><li>Students</li></a>
 		<li class="dashed_line"></li>
 		<a href="{% url 'scholar' %}"><li>Visiting Scholars</li></a>
 		<li class="dashed_line"></li>
-		<a href="{% url 'alumni' %}"><li>Alumni</li></a>
 
 
 	</ul>
@@ -26,7 +25,7 @@
 
 	<div class="menubar_content">
 
-		<form autocomplete="off" id="people_search" method="post" action="">
+		<form autocomplete="off" id="people_search" method="get" action="">
 			{% csrf_token %}
 			<div id="people_search_title">Search Faculty</div>
 			<div id="input_wrapper">

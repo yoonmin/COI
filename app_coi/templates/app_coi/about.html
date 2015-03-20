@@ -12,11 +12,11 @@
 
 	<ul class="menubar_list" id="about">
 		<img class="menubar_img" src="{% static 'img/box_about.jpg' %}">
-		<a href="{% url 'faculty' %}" style="color: #8a9140"><li>Who We Are</li></a>
+		<a href="{% url 'about' %}" style="color: #8a9140"><li>Who We Are</li></a>
 		<li class="dashed_line"></li>
 		<a href="#"><li>Research Papers</li></a>
 		<li class="dashed_line"></li>
-		<a href="#"><li>Our Network</li></a>
+		<a href="{% url 'featured' %}"><li>Featured COI People</li></a>
 	</ul>
 
 

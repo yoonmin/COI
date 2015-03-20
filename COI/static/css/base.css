@@ -382,7 +382,7 @@ html, body {
 
 
 #main {
-  margin-top: 15%;
+  margin-top: 14%;
   width: 100%;
 }
 
@@ -396,6 +396,7 @@ html, body {
 
 #content > #slider {
   width: 100%;
+  /*background-color: black;*/
   position: relative;
 }
 
@@ -417,9 +418,21 @@ html, body {
   bottom: 0;
   background-color: #5a5a5a;
   color: white;
-  width: 32%;
+  width: 40%;
 
-  padding: 3% 3% 3% 3%;
+  padding: 2% 4% 2% 4%;
+
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+
+  opacity: 0.6;
+}
+
+#content #slider_description:hover {
+  opacity: 1.0;
 }
 
 #content #slider_description a {
@@ -434,9 +447,22 @@ html, body {
 }
 
 #content #slider_description .slider_box .slider_title {
-  font-size: 2vw;
+  font-size: 2.5vw;
   font-family: "Lusitana-Bold";
-  margin-bottom: 3%;
+  /*margin-bottom: 0%;*/
+}
+
+#content #slider_description .slider_box .slider_title .title_description {
+  font-size: 1.3vw;
+  /*font-family: Verdana;*/
+}
+#content #slider_description .slider_box .slider_title .title_header {
+  font-size: 1.7vw;
+  /*font-family: Verdana;*/
+}
+
+#content #slider_description .slider_box .slider_title .title_name {
+  color: #0096ff;
 }
 
 #content #slider_description .slider_box .slider_content {
@@ -447,8 +473,9 @@ html, body {
 
 #content #slider_description .slider_box .slider_hidden {
   display: none;
-  margin-top: 6%;
-  font-size: 1.4vw;
+  margin-top: 3%;
+  font-size: 1.1vw;
+  text-align: justify;
 }
 
 #content #slider_description .slider_box .slider_hidden > li {
@@ -571,7 +598,32 @@ html, body {
   display: inline-block;
   vertical-align: top;
   width: 34%;
+}
 
+#content > #index_middle > #index_links .link {
+  line-height: 6vw;
+  margin-left: 5%;
+  font-size: 1.3vw;
+  border-bottom: 1px solid #8e8e8e;
+}
+
+#content > #index_middle > #index_links .link a {
+  display: block;
+}
+
+
+#content > #index_middle > #index_links > .link span {
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+
+  float: right;
+  color: #8e8e8e
+}
+
+#content > #index_middle > #index_links .link a:hover span {
+  color: #0096ff;
 }
 
 #content > #index_middle > #index_links > .link img {
@@ -583,10 +635,322 @@ html, body {
 
 
 
+.result_content {
+  margin-left: 5%;
+}
 
 
 
 
+
+
+.contact_content {
+  margin-left: 5%;
+  width: 90%;
+}
+
+.contact_col {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10%;
+}
+.contact_col a {
+  color: blue;
+}
+.contact_col a:hover {
+  text-decoration: underline;
+}
+
+
+.paper {
+  margin-top: 3%;
+  margin-bottom: 6%;
+}
+
+.paper .paper_title {
+  font-size: 1.6vw;
+  font-family: "Lusitana-Bold";
+  color: #00a8ff;
+}
+
+.paper .paper_icon {
+  width: 3%;
+  vertical-align: middle;
+}
+
+.paper .abstract_link, .pdf_link {
+  color: #5a5a5a;
+}
+
+.paper .paper_abstract {
+  margin-top: 2%;
+  display: none;
+}
+
+
+
+
+
+
+.menubar_content #people_search {
+}
+
+/*.menubar_content #people_search_title {
+  position: absolute;
+  top: -16%;
+  background-color: white;
+  padding: 0 2%;
+  font-size: 1.2vw;
+}*/
+
+/*
+.menubar_content #input_wrapper {
+  display: block;
+  border-bottom: 2px solid black;
+  width: 90%;
+  margin: auto;
+  padding: 1% 1%;
+}
+
+.menubar_content #people_input {
+  border: none;
+  box-shadow: none;
+  font-size: 1.1vw;
+  width: 90%;
+  margin-left: 10%;
+}
+
+.menubar_content #people_submit {
+  border: none;
+  outline: none;
+
+  width: 6%;
+  vertical-align: top;
+  position: absolute;
+  left: 7%;
+  top: 38%;
+}
+*/
+
+
+#title_search, #author_search {
+  margin-top: 3%;
+  margin-bottom: 5%;
+  border: 1px solid black;
+  padding: 2.5% 1%;
+  width: 42%;
+  position: relative;
+  display: inline-block;
+  margin-right: 3%;
+}
+#paper_search_title {
+  position: absolute;
+  top: -12%;
+  background-color: white;
+  padding: 0 2%;
+  font-size: 1.2vw;
+}
+#paper_submit {
+  border: none;
+  outline: none;
+
+  width: 5%;
+  vertical-align: top;
+  position: absolute;
+  left: 8%;
+  margin-top: 1%;
+}
+
+.form_input {
+  border: none;
+  box-shadow: none;
+  font-size: 1.1vw;
+  border-bottom: 2px solid black;
+  padding: 1% 1%;
+  margin-bottom: 3%;
+  width: 78%;
+  padding-left: 9%;
+  margin-left: 5%;
+}
+
+
+
+
+
+.featured_list {
+  margin-top: 5%;
+}
+
+.featured_preview_img {
+  width: 40%;
+  display: inline-block;
+  position: relative;
+}
+
+.featured_preview_img img {
+  width: 100%;
+  opacity: 1.0;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;  
+}
+.featured_preview_img img:hover {
+  opacity: 0.5;
+}
+
+.featured_preview_img .box_hidden {
+  background-color: #7d7d7d;
+  font-family: "Lusitana-Bold";
+  font-size: 2vw;
+  position: absolute;
+  bottom: 1.4%;
+  width: 92%;
+  padding: 3% 4%;
+  color: white;
+
+  display: none;
+}
+
+
+
+.featured_preview_description {
+  margin-bottom: 15%;
+  display: inline-block;
+  width: 54%;
+  margin-left: 5%;
+  vertical-align: top;
+}
+
+
+.featured_preview_description .featured_summary {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.featured_preview_description .featured_summary a {
+  color: blue;
+}
+.featured_preview_description .featured_summary a:hover {
+  text-decoration: underline;
+}
+
+
+.featured {
+  margin-left: 2%;
+  padding-top: 4%;
+  padding-bottom: 7%;
+}
+
+.featured h1 {
+  font-size: 3vw;
+}
+
+
+.featured .featured_thumb {
+  width: 35%;
+  margin-top: 3%;
+  display: inline-block;
+}
+.featured .featured_thumb img {
+  width: 100%;
+}
+
+
+.featured .featured_description {
+  margin-left: 3%;
+  display: inline-block;
+  vertical-align: top;
+  width: 59%;
+}
+
+.featured a {
+  color: blue;
+}
+.featured a:hover {
+  text-decoration: underline;
+}
+
+
+.featured .featured_description .featured_title {
+  font-family: "Futura";
+  font-size: 1.6vw;
+}
+
+
+
+.featured .icons {
+  float: right;
+  width: 40%;
+  text-align: center;
+  margin-top: 5%;
+}
+
+
+.featured .icon {
+  width: 40%;
+  /*margin: auto;*/
+  margin-left: 3%;
+  display: inline-block;
+  text-align: center;
+  float: right;
+}
+
+
+.featured .icon img {
+  width: 100%;
+}
+
+
+.featured .interview_img {
+  width: 70%;
+  position: relative;
+  margin-bottom: 7%;
+}
+.featured .interview_img img {
+  width: 100%;
+}
+
+
+
+/*
+
+.featured .featured_links {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.featured .featured_links .link {
+  line-height: 3vw;
+  font-size: 1.3vw;
+}
+
+.featured .featured_links .link a {
+  display: block;
+  color: black;
+}
+.featured .featured_links .link a:hover {
+  text-decoration: none;
+}
+
+
+.featured .featured_links .link span {
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+
+  float: right;
+  color: #8e8e8e
+}
+
+.featured .featured_links .link a:hover span {
+  color: #0096ff;
+}
+
+*/
 
 
 
@@ -843,10 +1207,6 @@ html, body {
 
 
 
-.menubar_tabbed_content {
-
-}
-
 
 
 
@@ -920,7 +1280,12 @@ html, body {
 	text-align: justify;
 	overflow: hidden;
 	overflow: -moz-scrollbars-none;
+  font-family: Verdana;
 }
+
+
+
+
 
 
 

@@ -1,0 +1,134 @@
+{% extends "app_coi/base.html" %}
+
+{% block title %}Welcome to COI{% endblock title %}
+
+{% block content %}
+
+
+{% load staticfiles %}
+
+<div class ="page_content">
+
+
+	<ul class="menubar_list" id="about">
+		<img class="menubar_img" src="{% static 'img/box_about.jpg' %}">
+		<a href="{% url 'about' %}"><li>Who We Are</li></a>
+		<li class="dashed_line"></li>
+		<a href="#"><li>Research Papers</li></a>
+		<li class="dashed_line"></li>
+		<a href="{% url 'featured' %}" style="color: #8a9140"><li>Featured COI People</li></a>
+	</ul>
+
+
+	<div class="menubar_content">
+
+
+	<h2 style="color: #8a9140; font-family:'Lusitana-Bold'">Featured COI People</h2><br>
+
+
+
+		<div class="featured">
+
+		{% if featured.category == 'Interview' %}
+			<div class="interview_img">
+				<img src="/media/{{featured.thumb}} "/>
+			</div>
+
+			<h1 style="color: #8a9140; font-family:'Lusitana-Bold'">{{featured.name}}</h1><br>
+
+			{{featured.summary}}<br><br>
+
+			Watch full interview at:<br><br>
+			<a href="{{featured.interview}}" target="_blank">{{featured.interview}}</a>
+			
+
+
+
+		{% else %}
+
+
+
+			
+				<h2 style="font-family:'Lusitana-Bold'">{{featured.category}}:</h2><h1 style="color: #8a9140; font-family:'Lusitana-Bold'">{{featured.name}}</h1><span style="font-family:'Lusitana-Bold'">{{featured.title}}</span><br>
+				
+				<div class="featured_thumb">
+					<img class="" src="/media/{{featured.thumb}}" />
+
+						<div class="icons">
+							{% if featured.cv %}
+								<div class="icon left"><a href="{{featured.cv}}" target="_top"><img src="{% static 'img/cv_icon.jpg' %}" /></a></div>
+							{% endif %}
+							{% if featured.website %}
+								<div class="icon right"><a href="{{featured.website}}" target="_blank"><img src="{% static 'img/website_icon.jpg' %}" /></a></div>
+							{% endif %}						
+						</div>
+
+				</div>
+				
+				<div class="featured_description">
+					<br>
+					<p>
+						{% autoescape off %}
+							{{featured.summary|linebreaksbr}}
+						{% endautoescape %}
+						<br><br>
+					</p>
+				</div>
+
+				{% if featured.biography %}
+					<br><br><br><br>
+					<h2 style="font-family:'Lusitana-Bold'">Biography</h2>
+					{% autoescape off %}
+						<br>{{featured.biography|linebreaksbr}}
+					{% endautoescape %}
+				{% endif %}
+
+				{% if featured.interest %}
+					<br><br><br><br>
+					<h2 style="font-family:'Lusitana-Bold'">Research Interest</h2>
+					{% autoescape off %}
+						<br>{{featured.interest|linebreaksbr}}
+					{% endautoescape %}
+				{% endif %}
+
+				{% if featured.projects %}
+					<br><br><br><br>
+					<h2 style="font-family:'Lusitana-Bold'">Projects</h2>
+					{% autoescape off %}
+						<br>{{featured.projects|linebreaksbr}}
+					{% endautoescape %}
+				{% endif %}
+
+				{% if featured.publication %}
+					<br><br><br><br>
+					<h2 style="font-family:'Lusitana-Bold'">Publications</h2>
+					{% autoescape off %}
+						<br>{{featured.publication|linebreaksbr}}
+					{% endautoescape %}
+				{% endif %}
+
+
+				{% if featured.news %}
+					<br><br><br><br>
+					<h2 style="font-family:'Lusitana-Bold'">Recent News</h2>
+					{% autoescape off %}
+						<br>{{featured.news|linebreaksbr}}
+					{% endautoescape %}
+				{% endif %}
+			
+
+
+
+		{% endif %}
+
+		</div>
+
+	</div>
+
+
+
+</div>
+
+
+
+{% endblock content %}

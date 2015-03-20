@@ -406,6 +406,31 @@
                         $el.mode(false);
                         if (settings.gallery === true) {
                             $this.slideThumb();
+
+                            
+                            var i = $(this).index();
+                            var current_index = $('.pager .active').index();
+                            var activeBox = $("#slider_description .active");
+                            
+                            if (i != current_index) {
+                                $('.pager .active').each(function() {
+                                    $(this).removeClass("active");
+                                });
+
+                                activeBox.removeClass("active");
+                                activeBox.addClass("hidden");
+                            }
+
+                            activeBox = $("#slider_description").children().eq(i);
+
+                            if (i != current_index) {
+                                $('.pager').each(function() {
+                                    $(this).children().eq(i).addClass("active");
+                                });
+
+                                activeBox.addClass("active");
+                                activeBox.removeClass("hidden");
+                            }
                         }
                         clearInterval(interval);
                         return false;
