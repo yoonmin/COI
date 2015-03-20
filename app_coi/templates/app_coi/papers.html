@@ -60,20 +60,7 @@
 
 
 <script src="{% static 'js/search.js' %}"></script>
-<script type="text/javascript" language="javascript">
-	$(".abstract_link").click(
-		function() {
-			$(this).parent().find(".paper_abstract").slideToggle();
 
-			if ($(this).find("span").html().indexOf("Abstract") >= 0) {
-				$(this).find("span").html("&#9660; Hide ");
-			}
-			else {
-				$(this).find("span").html("&#9658; Abstract ");
-			}
-		}
-	);
-</script>
 
 
 {% endblock content %}
