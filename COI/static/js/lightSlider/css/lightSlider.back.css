@@ -72,6 +72,9 @@
     margin: 10px 0 0;
     padding: 0;
     text-align: center;
+    position: absolute;
+    top: 85%;
+    width: 100%;
 }
 .lSSlideOuter .lSPager.lSpg > li {
     cursor: pointer;
@@ -79,20 +82,21 @@
     padding: 0 5px;
 }
 .lSSlideOuter .lSPager.lSpg > li a {
-    background-color: #222222;
+    background-color: black;
     border-radius: 30px;
     display: inline-block;
-    height: 8px;
+    height: 25px;
     overflow: hidden;
     text-indent: -999em;
-    width: 8px;
+    width: 25px;
     position: relative;
     z-index: 99;
     -webkit-transition: all 0.5s linear 0s;
     transition: all 0.5s linear 0s;
+    margin: 0 10px;
 }
 .lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a {
-    background-color: #428bca;
+    background-color: #00fff6;
 }
 .lSSlideOuter .media {
     opacity: 0.8;
@@ -104,6 +108,7 @@
 
 /** Gallery */
 .lSSlideOuter .lSPager.lSGallery {
+    /*width: 50%;*/
     list-style: none outside none;
     padding-left: 0;
     margin: 0;

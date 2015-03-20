@@ -231,6 +231,12 @@
                     $slide.parent().addClass('vertical');
                     elSize = settings.verticalHeight;
                     $slide.css('height', elSize + 'px');
+                    $slide.css('width', '85%');
+                    // var w = parseInt($('.lSSlideWrapper').css('width').replace('px', ''));
+                    // $slide.css('height', w*0.51367 + 'px');
+                    // $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
+                    // $('.lSSlideWrapper .lslide').css('height', w*0.51367 + 'px');
+                    // $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
                 } else {
                     elSize = $el.outerWidth();
                 }
@@ -383,7 +389,7 @@
                     if (settings.gallery === true) {
                         if (settings.vertical === true) {
                             // set Gallery thumbnail width
-                            $cSouter.find('.lSPager').css('width', settings.vThumbWidth + 'px');
+                            $cSouter.find('.lSPager').css('width', settings.vThumbWidth);                            
                         }
                         pagerWidth = (i * (settings.thumbMargin + thumbWidth)) + 0.5;
                         $cSouter.find('.lSPager').css({
@@ -406,6 +412,31 @@
                         $el.mode(false);
                         if (settings.gallery === true) {
                             $this.slideThumb();
+
+                            
+                            var i = $(this).index();
+                            var current_index = $('.pager .active').index();
+                            var activeBox = $("#slider_description .active");
+                            
+                            if (i != current_index) {
+                                $('.pager .active').each(function() {
+                                    $(this).removeClass("active");
+                                });
+
+                                activeBox.removeClass("active");
+                                activeBox.addClass("hidden");
+                            }
+
+                            activeBox = $("#slider_description").children().eq(i);
+
+                            if (i != current_index) {
+                                $('.pager').each(function() {
+                                    $(this).children().eq(i).addClass("active");
+                                });
+
+                                activeBox.addClass("active");
+                                activeBox.removeClass("hidden");
+                            }
                         }
                         clearInterval(interval);
                         return false;
@@ -1021,7 +1052,20 @@
             setTimeout(function () {
                 e.preventDefault();
                 refresh.init();
+                $('.lSSlideWrapper').css('width', '85%');
+                var w = parseInt($('.lSSlideWrapper').css('width').replace('px', ''));
+
+                $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
+                $('.lSSlideWrapper .lslide').css('height', w*0.51367 + 'px');
+                $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
+
+                var h = $('.lSSlideWrapper').css('height');
+
+                $('.lSPager').css('width', settings.vThumbWidth);
+                $('.lSPager').css('height', w*0.51367 + 'px');
             }, 200);
+
+            
         });
         return this;
     };
