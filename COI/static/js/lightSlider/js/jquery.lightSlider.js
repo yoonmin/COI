@@ -232,7 +232,10 @@
                     elSize = settings.verticalHeight;
                     // $slide.css('height', elSize + 'px');
                     $slide.css('width', '85%');
-                    $slide.css('height', $slide.css('width')*0.51367 + 'px');
+                    var w = $slide.css('width');
+                    $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
+                    $('.lSSlideWrapper .lslide').css('height', w*0.51367 + 'px');
+                    $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
                 } else {
                     elSize = $el.outerWidth();
                 }
@@ -385,7 +388,7 @@
                     if (settings.gallery === true) {
                         if (settings.vertical === true) {
                             // set Gallery thumbnail width
-                            $cSouter.find('.lSPager').css('width', settings.vThumbWidth);
+                            $cSouter.find('.lSPager').css('width', settings.vThumbWidth);                            
                         }
                         pagerWidth = (i * (settings.thumbMargin + thumbWidth)) + 0.5;
                         $cSouter.find('.lSPager').css({
@@ -1058,7 +1061,7 @@
                 var h = $('.lSSlideWrapper').css('height');
 
                 $('.lSPager').css('width', settings.vThumbWidth);
-                $('.lSPager').css('height', h + 'px');
+                $('.lSPager').css('height', w*0.51367 + 'px');
             }, 200);
 
             
