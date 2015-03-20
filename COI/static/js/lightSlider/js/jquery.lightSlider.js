@@ -230,7 +230,7 @@
                 if (settings.vertical) {
                     $slide.parent().addClass('vertical');
                     elSize = settings.verticalHeight;
-                    $slide.css('height', elSize + 'px');
+                    // $slide.css('height', elSize + 'px');
                     $slide.css('width', '85%');
                 } else {
                     elSize = $el.outerWidth();
@@ -855,7 +855,7 @@
                 } else {
                     elSize = $children.outerHeight();
                 }
-                $slide.css('height', elSize + 'px');
+                // $slide.css('height', elSize + 'px');
             } else {
                 elSize = $slide.outerWidth();
             }
@@ -1049,10 +1049,8 @@
                 refresh.init();
                 $('.lSSlideWrapper').css('width', '85%');
                 var w = $('.lSSlideWrapper').css('width');
-                console.log(w);
                 $('.lSSlideWrapper').css('height', w*0.51367);
                 var h = $('.lSSlideWrapper').css('height');
-                console.log(h);
 
                 $('.lSPager').css('width', settings.vThumbWidth);
                 $('.lSPager').css('height', h);
