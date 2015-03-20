@@ -861,18 +861,15 @@
                     elSize = $children.outerHeight();
                 }
 
-                $('.lSSlideWrapper').css('width', '85%');
                 var w = parseInt($('.lSSlideWrapper').css('width').replace('px', ''));
                 $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
-                $('.lSSlideWrapper .lslide').css('height', w*0.51367 + 'px');
+                $('..lslide').css('height', w*0.51367 + 'px');
                 $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
 
                 var h = $('.lSSlideWrapper').css('height');
                 $('.lSPager').css('width', settings.vThumbWidth);
                 $('.lSPager').css('height', w*0.51367 + 'px');
 
-
-                // $slide.css('height', elSize + 'px');
             } else {
                 elSize = $slide.outerWidth();
             }
