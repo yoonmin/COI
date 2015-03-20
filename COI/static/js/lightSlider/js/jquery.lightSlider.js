@@ -1047,6 +1047,8 @@
             setTimeout(function () {
                 e.preventDefault();
                 refresh.init();
+                $('.lSSlideWrapper').css('width', '85%');
+                $('.lSPager').css('width', settings.vThumbWidth);
             }, 200);
 
             
