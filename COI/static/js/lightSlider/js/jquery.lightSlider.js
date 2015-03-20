@@ -231,12 +231,32 @@
                     $slide.parent().addClass('vertical');
                     elSize = settings.verticalHeight;
                     // $slide.css('height', elSize + 'px');
-                    $slide.css('width', '85%');
+                    // $slide.css('width', '85%');
 
+                    // var w = parseInt($('.lSSlideWrapper').css('width').replace('px', ''));
+                    // $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
+                    // $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
+                    // $('.lslide').css('height', w*0.51367 + 'px');
+                    // // $('.lSGallery').css('height', w*0.51367 + 'px');
+
+                    // $('.lSPager li').each(function() {
+                    //     var w = parseInt($('.lSPager').css('width').replace('px', ''));
+                    //     $(this).css('height', w*0.7392 + 'px');
+                    // });
+                    // $('.lSPager li img').each(function() {
+                    //     var w = parseInt($('.lSPager').css('width').replace('px', ''));
+                    //     $(this).css('height', w*0.7392 + 'px');
+                    // });
+
+                    // var h = $('.lSSlideWrapper').css('height');
+                    // $('.lSPager').css('width', settings.vThumbWidth);
+                    // $('.lSPager').css('height', h);
+                    $('.lSSlideWrapper').css('width', '85%');
                     var w = parseInt($('.lSSlideWrapper').css('width').replace('px', ''));
+
                     $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
+                    $('.lSSlideWrapper .lslide').css('height', w*0.51367 + 'px');
                     $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
-                    $('.lslide').css('height', w*0.51367 + 'px');
                     // $('.lSGallery').css('height', w*0.51367 + 'px');
 
                     $('.lSPager li').each(function() {
@@ -250,7 +270,7 @@
 
                     var h = $('.lSSlideWrapper').css('height');
                     $('.lSPager').css('width', settings.vThumbWidth);
-                    $('.lSPager').css('height', h);
+                    $('.lSPager').css('height', h);                    
                 } else {
                     elSize = $el.outerWidth();
                 }
@@ -408,7 +428,26 @@
                             $('.lSPager').css('width', settings.vThumbWidth);
                             $('.lSPager').css('height', h);
 
+                            $('.lSSlideWrapper').css('width', '85%');
+                            var w = parseInt($('.lSSlideWrapper').css('width').replace('px', ''));
 
+                            $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
+                            $('.lSSlideWrapper .lslide').css('height', w*0.51367 + 'px');
+                            $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
+                            // $('.lSGallery').css('height', w*0.51367 + 'px');
+
+                            $('.lSPager li').each(function() {
+                                var w = parseInt($('.lSPager').css('width').replace('px', ''));
+                                $(this).css('height', w*0.7392 + 'px');
+                            });
+                            $('.lSPager li img').each(function() {
+                                var w = parseInt($('.lSPager').css('width').replace('px', ''));
+                                $(this).css('height', w*0.7392 + 'px');
+                            });
+
+                            var h = $('.lSSlideWrapper').css('height');
+                            $('.lSPager').css('width', settings.vThumbWidth);
+                            $('.lSPager').css('height', h);
                         }
                         pagerWidth = (i * (settings.thumbMargin + thumbWidth)) + 0.5;
                         $cSouter.find('.lSPager').css({
@@ -880,12 +919,33 @@
                     elSize = $children.outerHeight();
                 }
 
-                var w = parseInt($('.lSSlideWrapper').css('width').replace('px', ''));
-                $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
-                $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
-                $('.lslide').css('height', w*0.51367 + 'px');
-                // $('.lSGallery').css('height', w*0.51367 + 'px');
+                // var w = parseInt($('.lSSlideWrapper').css('width').replace('px', ''));
+                // $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
+                // $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
+                // $('.lslide').css('height', w*0.51367 + 'px');
+                // // $('.lSGallery').css('height', w*0.51367 + 'px');
                 
+                // $('.lSPager li').each(function() {
+                //     var w = parseInt($('.lSPager').css('width').replace('px', ''));
+                //     $(this).css('height', w*0.7392 + 'px');
+                // });
+                // $('.lSPager li img').each(function() {
+                //     var w = parseInt($('.lSPager').css('width').replace('px', ''));
+                //     $(this).css('height', w*0.7392 + 'px');
+                // });
+                
+
+                // var h = $('.lSSlideWrapper').css('height');
+                // $('.lSPager').css('width', settings.vThumbWidth);
+                // $('.lSPager').css('height', h);
+                $('.lSSlideWrapper').css('width', '85%');
+                var w = parseInt($('.lSSlideWrapper').css('width').replace('px', ''));
+
+                $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
+                $('.lSSlideWrapper .lslide').css('height', w*0.51367 + 'px');
+                $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
+                // $('.lSGallery').css('height', w*0.51367 + 'px');
+
                 $('.lSPager li').each(function() {
                     var w = parseInt($('.lSPager').css('width').replace('px', ''));
                     $(this).css('height', w*0.7392 + 'px');
@@ -894,11 +954,10 @@
                     var w = parseInt($('.lSPager').css('width').replace('px', ''));
                     $(this).css('height', w*0.7392 + 'px');
                 });
-                
 
                 var h = $('.lSSlideWrapper').css('height');
                 $('.lSPager').css('width', settings.vThumbWidth);
-                $('.lSPager').css('height', h);
+                $('.lSPager').css('height', h);                
 
             } else {
                 elSize = $slide.outerWidth();
