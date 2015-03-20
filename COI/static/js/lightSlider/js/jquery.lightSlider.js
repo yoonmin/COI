@@ -229,10 +229,10 @@
                 }
                 if (settings.vertical) {
                     $slide.parent().addClass('vertical');
-                    // elSize = settings.verticalHeight;
+                    elSize = settings.verticalHeight;
                     // $slide.css('height', elSize + 'px');
                     $slide.css('width', '85%');
-                    $slide.css('height', $slide.css('width')*0.51367);
+                    $slide.css('height', $slide.css('width')*0.51367 + 'px');
                 } else {
                     elSize = $el.outerWidth();
                 }
