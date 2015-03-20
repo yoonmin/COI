@@ -133,17 +133,15 @@ $(document).ready(function() {
     	loop: true,
 
     	controls: false,
-    	// pager: false,
+    	pager: false,
         enableDrag: false,
         enableTouch: false,
         keyPress: false,
         
-        gallery:true,
-        vertical:true,
-        galleryMargin: 10,
-        // verticalHeight: 200,
-        
-        vThumbWidth: 200,
+        // gallery:true,
+        // vertical:true,
+        // galleryMargin: 10,
+        // verticalHeight: 1000,
         item:1,
         thumbItem:4,
         slideMargin:0,
@@ -156,6 +154,29 @@ $(document).ready(function() {
     
 
 
+    $("#gallery li").click(function(){
+        var i = $(this).index();
+
+        var activeGall = $("#gallery .active");
+        var current_index = activeGall.index();
+
+        if (i != current_index) {
+            activeGall.removeClass("active");
+            $("#gallery").children().eq(i).addClass("active");
+            slider.goToSlide(i);
+
+            var activeBox = $("#slider_description .active");
+            activeBox.removeClass("active");
+            activeBox.addClass("hidden");
+
+            activeBox = $("#slider_description").children().eq(i-1);
+            $('.pager').each(function() {
+                $(this).children().eq(i-1).addClass("active");
+            });
+            activeBox.addClass("active");
+            activeBox.removeClass("hidden");            
+        }
+    });
 
 
 
@@ -186,6 +207,10 @@ $(document).ready(function() {
 
     		activeBox.addClass("active");
     		activeBox.removeClass("hidden");
+
+            var activeGall = $("#gallery .active");
+            activeGall.removeClass("active");
+            $("#gallery").children().eq(i+1).addClass("active");
     	}
     });
 
