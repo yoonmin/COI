@@ -257,7 +257,7 @@
                     $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
                     $('.lSSlideWrapper .lslide').css('height', w*0.51367 + 'px');
                     $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
-                    // $('.lSGallery').css('height', w*0.51367 + 'px');
+                    $('.lSGallery').css('height', w*0.51367 + 'px');
 
                     $('.lSPager li').each(function() {
                         var w = parseInt($('.lSPager').css('width').replace('px', ''));
@@ -434,7 +434,7 @@
                             $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
                             $('.lSSlideWrapper .lslide').css('height', w*0.51367 + 'px');
                             $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
-                            // $('.lSGallery').css('height', w*0.51367 + 'px');
+                            $('.lSGallery').css('height', w*0.51367 + 'px');
 
                             $('.lSPager li').each(function() {
                                 var w = parseInt($('.lSPager').css('width').replace('px', ''));
@@ -1156,7 +1156,7 @@
                 $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
                 $('.lSSlideWrapper .lslide').css('height', w*0.51367 + 'px');
                 $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
-                // $('.lSGallery').css('height', w*0.51367 + 'px');
+                $('.lSGallery').css('height', w*0.51367 + 'px');
 
                 $('.lSPager li').each(function() {
                     var w = parseInt($('.lSPager').css('width').replace('px', ''));
