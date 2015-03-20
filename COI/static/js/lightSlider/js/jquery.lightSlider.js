@@ -236,7 +236,7 @@
                     var w = parseInt($('.lSSlideWrapper').css('width').replace('px', ''));
                     $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
                     $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
-                    $('.lslide').css('height', w*0.51367 + 'px');
+                    $('.slider_content').css('height', w*0.51367 + 'px');
                     
 
                     var h = $('.lSSlideWrapper').css('height');
@@ -870,7 +870,7 @@
                 var w = parseInt($('.lSSlideWrapper').css('width').replace('px', ''));
                 $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
                 $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
-                $('.lslide').css('height', w*0.51367 + 'px');
+                $('.slider_content').css('height', w*0.51367 + 'px');
                 
 
                 var h = $('.lSSlideWrapper').css('height');
@@ -1072,7 +1072,7 @@
                 var w = parseInt($('.lSSlideWrapper').css('width').replace('px', ''));
 
                 $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
-                $('.lSSlideWrapper .lslide').css('height', w*0.51367 + 'px');
+                $('.lSSlideWrapper .slider_content').css('height', w*0.51367 + 'px');
                 $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
 
                 var h = $('.lSSlideWrapper').css('height');
