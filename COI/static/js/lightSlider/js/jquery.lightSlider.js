@@ -467,7 +467,7 @@
                         tP = ((tHT) * 100) / elSize;
                     }
                     ob.css({
-                        // 'height': tH + 'px',
+                        'height': tH + 'px',
                         'padding-bottom': tP + '%'
                     });
                 };
