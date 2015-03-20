@@ -174,9 +174,7 @@ $(document).ready(function() {
     		activeBox.addClass("hidden");
     	}
 
-
     	slider.goToSlide(i+1);
-
 
     	activeBox = $("#slider_description").children().eq(i);
 
@@ -188,7 +186,6 @@ $(document).ready(function() {
     		activeBox.addClass("active");
     		activeBox.removeClass("hidden");
     	}
-
     });
 
 
