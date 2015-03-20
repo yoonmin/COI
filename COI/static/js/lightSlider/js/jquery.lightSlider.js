@@ -1048,7 +1048,12 @@
                 e.preventDefault();
                 refresh.init();
                 $('.lSSlideWrapper').css('width', '85%');
+                var w = $('.lSSlideWrapper').css('width');
+                $('.lSSlideWrapper').css('height', w*0.51367);
+                var h = $('.lSSlideWrapper').css('height');
+
                 $('.lSPager').css('width', settings.vThumbWidth);
+                $('.lSPager').css('height', h);
             }, 200);
 
             
