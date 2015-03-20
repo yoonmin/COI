@@ -47,15 +47,20 @@ $(document).ajaxSend(function(event, xhr, settings) {
     }
 });
 
-// function updateSliderSize() {
-// 	var imgHeight = $(".slider_content").css("height");
-// 	$(".lSSlideOuter").css("height", imgHeight);
-// }
+
+function updateSliderSize() {
+	// var imgHeight = $(".slider_content").css("height");
+	// $(".lSSlideOuter").css("height", imgHeight);
+    $(".lSSlideWrapper").css("width", 973.391);
+    $(".lSSlideWrapper").css("height", 500);
+}
 
 $(document).ready(function() {
 
 
-	// $(window).on("resize", updateSliderSize);
+
+
+	$(window).on("resize", updateSliderSize);
 
 
 	
