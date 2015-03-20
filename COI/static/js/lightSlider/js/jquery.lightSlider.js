@@ -1051,6 +1051,7 @@
                 var w = $('.lSSlideWrapper').css('width');
                 $('.lSSlideWrapper').css('height', w*0.51367);
                 var h = $('.lSSlideWrapper').css('height');
+                console.log(h);
 
                 $('.lSPager').css('width', settings.vThumbWidth);
                 $('.lSPager').css('height', h);
