@@ -236,7 +236,7 @@
                     var w = parseInt($('.lSSlideWrapper').css('width').replace('px', ''));
                     $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
                     $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
-                    $('.slider_content').css('height', w*0.51367 + 'px');
+                    $('.lslide').css('height', w*0.51367 + 'px');
                     $('.lSGallery').css('height', w*0.51367 + 'px');
 
                     var h = $('.lSSlideWrapper').css('height');
@@ -395,7 +395,9 @@
                     if (settings.gallery === true) {
                         if (settings.vertical === true) {
                             // set Gallery thumbnail width
-                            $cSouter.find('.lSPager').css('width', settings.vThumbWidth);                            
+                            $cSouter.find('.lSPager').css('width', settings.vThumbWidth);
+                            var w = parseInt($('.lSSlideWrapper').css('width').replace('px', ''));
+                            $('.lSGallery').css('height', w*0.51367 + 'px');
                         }
                         pagerWidth = (i * (settings.thumbMargin + thumbWidth)) + 0.5;
                         $cSouter.find('.lSPager').css({
@@ -870,7 +872,7 @@
                 var w = parseInt($('.lSSlideWrapper').css('width').replace('px', ''));
                 $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
                 $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
-                $('.slider_content').css('height', w*0.51367 + 'px');
+                $('.lslide').css('height', w*0.51367 + 'px');
                 $('.lSGallery').css('height', w*0.51367 + 'px');
                 
 
@@ -1073,7 +1075,7 @@
                 var w = parseInt($('.lSSlideWrapper').css('width').replace('px', ''));
 
                 $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
-                $('.lSSlideWrapper .slider_content').css('height', w*0.51367 + 'px');
+                $('.lSSlideWrapper .lslide').css('height', w*0.51367 + 'px');
                 $('.lSSlideWrapper img').css('height', w*0.51367 + 'px');
                 $('.lSGallery').css('height', w*0.51367 + 'px');
 
