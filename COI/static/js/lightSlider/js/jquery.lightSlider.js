@@ -1050,11 +1050,11 @@
                 refresh.init();
                 $('.lSSlideWrapper').css('width', '85%');
                 var w = $('.lSSlideWrapper').css('width');
-                $('.lSSlideWrapper').css('height', w*0.51367);
+                $('.lSSlideWrapper').css('height', w*0.51367 + 'px');
                 var h = $('.lSSlideWrapper').css('height');
 
                 $('.lSPager').css('width', settings.vThumbWidth);
-                $('.lSPager').css('height', h);
+                $('.lSPager').css('height', h + 'px');
             }, 200);
 
             
