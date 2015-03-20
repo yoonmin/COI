@@ -319,7 +319,7 @@
                     }
 
                 } else {
-                    this.setHeight($el, true, true);
+                    // this.setHeight($el, true, true);
                     $el.addClass('lSFade');
                     if (!this.doCss()) {
                         $children.not(".active").css('display', 'none');
@@ -378,7 +378,7 @@
                     if (!settings.vertical && settings.gallery) {
                         var $pgr = $slide.parent().find('.lSGallery');
                         setTimeout(function () {
-                            $this.setHeight($pgr, false, false);
+                            // $this.setHeight($pgr, false, false);
                         });
                     }
                     if (settings.gallery === true) {
@@ -468,7 +468,7 @@
                         tP = ((tHT) * 100) / elSize;
                     }
                     ob.css({
-                        // 'height': tH + 'px',
+                        'height': tH + 'px',
                         'padding-bottom': tP + '%'
                     });
                 };
