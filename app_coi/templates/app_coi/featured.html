@@ -47,9 +47,12 @@
 
 				{% if featured.category != 'Interview' %}
 					<h2 style="font-family:'Lusitana-Bold'">{{featured.category}}:</h2>
-				{% endif %}
+					<h1 style="color: #8a9140; font-family:'Lusitana-Bold'">{{featured.name}}</h1><br>
+				
+				{% else %}
+					<h1 style="color: #8a9140; font-family:'Lusitana-Bold'; font-size: 1.5vw;">{{featured.name}}</h1><br>
 
-				<h1 style="color: #8a9140; font-family:'Lusitana-Bold'">{{featured.name}}</h1><br>
+				{% endif %}
 
 					{{featured.summary}}
 					<br><br>

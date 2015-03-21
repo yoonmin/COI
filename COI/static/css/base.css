@@ -55,7 +55,7 @@ a:visited {
 }
 
 html, body {
-  font-family: "Futura-Regular", "Futura";
+  font-family: "Futura-Regular", "Futura", Verdana;
   width: 100%;
 }
 
@@ -1084,7 +1084,7 @@ html, body {
 
 
 #footer .footer_col .footer_title {
-  font-family: "Futura-Regular", "FuturaCnd-Bold";
+  font-family: "Futura-Regular", "FuturaCnd-Bold", Verdana;
   font-size: 1.3vw;
   margin-bottom: 20px;
 }
@@ -1274,7 +1274,7 @@ html, body {
 }
 
 .people_block .people_name {
-	font-family: "Futura-Regular", "Futura";
+	font-family: "Futura-Regular", "Futura", Verdana;
 	margin-bottom: 2%;
 	
 	font-size: 1.3vw;
