@@ -126,7 +126,7 @@ html, body {
   position: absolute;
   top: 53%; right: 2%; 
   margin: auto;
-  height: 100%;
+  /*height: 100%;*/
 }
 
 
@@ -141,7 +141,9 @@ html, body {
 }
 
 #navbar #navbar_search > #search_link #search_box {
-  height: 25%;
+  height: 2.2vw;
+  /*height: 25%;*/
+
   transition: visibility 1s ease-in-out, opacity 1s ease-in-out;
   -webkit-transition: visibility 1s ease-in-out, opacity 1s ease-in-out;
   -moz-transition: visibility 1s ease-in-out, opacity 1s ease-in-out;
@@ -447,7 +449,6 @@ html, body {
 
 #content > #slider .slider_content > img {
   width: 100%;
-  height: 100%;
   display: block;
 }
 
@@ -1160,7 +1161,6 @@ html, body {
 	font-family: Verdana;
 	display: inline-block;
 	width: 74%;
-	height: 100%;
 	vertical-align: top;
 	padding-left: 5%;
 

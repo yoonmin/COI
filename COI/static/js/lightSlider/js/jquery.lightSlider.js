@@ -1021,6 +1021,8 @@
             setTimeout(function () {
                 e.preventDefault();
                 refresh.init();
+
+                location.reload();
             }, 200);
         });
         return this;

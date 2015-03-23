@@ -57,7 +57,9 @@ function updateSliderSize() {
 
 $(document).ready(function() {
 
-
+    $(window).on('orientationchange', function(event) {
+        location.reload();
+    });
 
 
 	$(window).on("resize", updateSliderSize);
