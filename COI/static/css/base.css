@@ -141,8 +141,8 @@ html, body {
 }
 
 #navbar #navbar_search > #search_link #search_box {
-  /*height: 2.2vw;*/
-  height: 25%;
+  height: 2.2vw;
+  /*height: 25%;*/
 
   transition: visibility 1s ease-in-out, opacity 1s ease-in-out;
   -webkit-transition: visibility 1s ease-in-out, opacity 1s ease-in-out;
