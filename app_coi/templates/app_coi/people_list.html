@@ -28,7 +28,9 @@
 				<div class="people_name">{{person.firstname}} {{person.lastname}}</div>
 			{% endif %}
 			<div class="people_description">
-				{{person.description|linebreaksbr}}
+				{% with description=person.description|linebreaksbr %}
+					{{description|urlize}}
+				{% endwith %}
 			</div>
 		</div>
 	</div>

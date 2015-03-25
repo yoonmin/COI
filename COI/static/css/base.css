@@ -1324,6 +1324,14 @@ html, body {
   font-family: Verdana;
 }
 
+.people_block .people_description a {
+  color: blue;
+}
+
+.people_block .people_description a:hover {
+  text-decoration: underline;
+}
+
 
 
 
