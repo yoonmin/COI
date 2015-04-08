@@ -1,11 +1,22 @@
 from django.db import models
 from django.conf import settings
 from django.template.defaultfilters import slugify
+from django.core.files.storage import FileSystemStorage
+import os
+
+class OverwriteStorage(FileSystemStorage):
+	def get_available_name(self, name):
+		# If the filename already exists, remove it as if it was a true file system
+		if self.exists(name):
+			os.remove(os.path.join(settings.MEDIA_ROOT, name))
+		return name
+
+
 
 class People(models.Model):
 	firstname 	= models.CharField(max_length=100)
 	lastname 	= models.CharField(max_length=100)
-	img 		= models.ImageField(upload_to='people')
+	img 		= models.ImageField(upload_to='people', storage=OverwriteStorage())
 	description = models.TextField()
 	email 		= models.EmailField(blank=True)
 	website 	= models.URLField(blank=True)
@@ -60,8 +71,8 @@ class Featured(models.Model):
 	category	= models.CharField(max_length=100, blank=True, null=True)
 	name 		= models.CharField(max_length=100, blank=True, null=True)
 	summary 	= models.TextField()
-	cover		= models.ImageField(upload_to='featured', blank=True)
-	thumb 		= models.ImageField(upload_to='featured', blank=True)
+	cover		= models.ImageField(upload_to='featured', blank=True, storage=OverwriteStorage())
+	thumb 		= models.ImageField(upload_to='featured', blank=True, storage=OverwriteStorage())
 
 	title 		= models.CharField(max_length=200, blank=True, null=True)
 	biography	= models.TextField(blank=True, null=True)
@@ -91,7 +102,7 @@ class Paper(models.Model):
 	author 		= models.CharField(max_length=200, blank=True, null=True)
 	date 		= models.CharField(max_length=100, blank=True, null=True)
 	abstract 	= models.TextField(blank=True, null=True)
-	pdf			= models.FileField(upload_to='papers', blank=True, null=True)
+	pdf			= models.FileField(upload_to='papers', blank=True, null=True, storage=OverwriteStorage())
 
 	def __unicode__(self):
 		return u'%s' % (self.title)

@@ -138,7 +138,7 @@
                 }, 50);
             },
             structure: function() {
-                $('body').append('<div id="lightGallery-outer" class="' + settings.addClass + '"><div id="lightGallery-Gallery"><div id="lightGallery-slider"></div><a id="lightGallery-close" class="close"></a></div></div>').addClass('lightGallery');
+                // $('body').append('<div id="lightGallery-outer" class="' + settings.addClass + '"><div id="lightGallery-Gallery"><div id="lightGallery-slider"></div><a id="lightGallery-close" class="close"></a></div></div>').addClass('lightGallery');
                 $galleryCont = $('#lightGallery-outer');
                 $gallery = $('#lightGallery-Gallery');
                 if (settings.showAfterLoad === true) {
