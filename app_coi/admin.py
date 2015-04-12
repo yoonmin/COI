@@ -2,16 +2,16 @@ from django.contrib import admin
 from .models import *
 
 class FacultyAdmin(admin.ModelAdmin):
-	list_display = ('firstname', 'lastname', 'img', 'email', 'website', 'category')
+	list_display = ('firstname', 'lastname', 'email', 'category')
+	list_filter = ('category',)
 
 class StudentAdmin(admin.ModelAdmin):
-	list_display = ('firstname', 'lastname', 'img', 'email', 'website', 'category')
+	list_display = ('firstname', 'lastname', 'email', 'category')
+	list_filter = ('category',)
 
 class ScholarAdmin(admin.ModelAdmin):
-	list_display = ('firstname', 'lastname', 'img', 'email', 'website', 'category')	
-
-class AlumniAdmin(admin.ModelAdmin):
-	list_display = ('firstname', 'lastname', 'img', 'email', 'website')	
+	list_display = ('firstname', 'lastname', 'email', 'category')
+	list_filter = ('category',)
 
 class FeaturedAdmin(admin.ModelAdmin):
 	list_display = ('name', 'category', 'summary', 'cover', 'thumb')
