@@ -59,7 +59,6 @@ class SearchMixin(object):
 			return super(IndexView, self).get(request)
 
 
-
 class IndexView(SearchMixin, TemplateView):
 	template_name = 'app_coi/index.html'
 
