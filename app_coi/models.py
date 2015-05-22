@@ -4,15 +4,15 @@ from django.template.defaultfilters import slugify
 from django.core.files.storage import FileSystemStorage
 import os
 
+# If img with same name exists in media directory, replace it with new image
 class OverwriteStorage(FileSystemStorage):
 	def get_available_name(self, name):
-		# If the filename already exists, remove it as if it was a true file system
 		if self.exists(name):
 			os.remove(os.path.join(settings.MEDIA_ROOT, name))
 		return name
 
 
-
+# Abstract base class for Faculty, Student, Visiting Scholar
 class Person(models.Model):
 	firstname 	= models.CharField(max_length=100)
 	lastname 	= models.CharField(max_length=100)
@@ -38,7 +38,6 @@ class Person(models.Model):
 		abstract = True	
 
 
-
 class Faculty(Person):
 	choices = (
 		("D", "Director"),
@@ -57,7 +56,6 @@ class Student(Person):
 	category = models.CharField(max_length=1, choices=choices, default="C")	
 
 
-
 class VisitingScholar(Person):
 	choices = (
 		("C", "Current Visiting Scholar"),
@@ -66,13 +64,13 @@ class VisitingScholar(Person):
 	category = models.CharField(max_length=1, choices=choices, default="C")
 
 
-
+# Featured content (update needed)
 class Featured(models.Model):
 	category	= models.CharField(max_length=100, blank=True, null=True)
 	name 		= models.CharField(max_length=100, blank=True, null=True)
 	summary 	= models.TextField()
-	cover		= models.ImageField(upload_to='featured', blank=True, storage=OverwriteStorage())
-	thumb 		= models.ImageField(upload_to='featured', blank=True, storage=OverwriteStorage())
+	cover		= models.ImageField(upload_to='featured', blank=True, storage=OverwriteStorage()) # Main cover image
+	thumb 		= models.ImageField(upload_to='featured', blank=True, storage=OverwriteStorage()) # Thumbnail image
 
 	title 		= models.CharField(max_length=200, blank=True, null=True)
 	biography	= models.TextField(blank=True, null=True)
@@ -85,6 +83,10 @@ class Featured(models.Model):
 
 	interview	= models.URLField(blank=True, null=True)
 	
+	# Sulgify page name
+	# (ex) "David Stark Interviewed on Bloomberg News"
+	# -> Slugify: 	"david-stark-interviewed-on-bloomberg-news"
+	# -> URL: 		http://www.columbia-coi.com/featured/david-stark-interviewed-on-bloomberg-news
 	slug 		= models.SlugField(max_length=255, blank=True, null=True)
 
 	def save(self, *args, **kwargs):
@@ -96,7 +98,7 @@ class Featured(models.Model):
 
 
 
-
+# http://www.columbia-coi.com/papers
 class Paper(models.Model):
 	title		= models.CharField(max_length=200, blank=True, null=True)
 	author 		= models.CharField(max_length=200, blank=True, null=True)

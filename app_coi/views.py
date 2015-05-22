@@ -8,7 +8,10 @@ from django.shortcuts import render
 from django.db.models import Q
 from django.core.exceptions import ObjectDoesNotExist
 
+# Allows navigation bar search feature in all pages
 class SearchMixin(object):
+
+	# Handle post requests
 	def post(self, request):
 		query = request.POST.get("search")
 
@@ -16,6 +19,7 @@ class SearchMixin(object):
 			found = False
 
 			people_list = []
+			# Find in Faculties
 			try:
 				people_list.extend(Faculty.objects.filter(
 					Q(firstname__istartswith=query) | Q(lastname__istartswith=query)
@@ -23,6 +27,7 @@ class SearchMixin(object):
 			except ObjectDoesNotExist:
 				pass
 
+			# Find in Students
 			try:
 				people_list += Student.objects.filter(
 					Q(firstname__istartswith=query) | Q(lastname__istartswith=query)
@@ -30,6 +35,7 @@ class SearchMixin(object):
 			except ObjectDoesNotExist:
 				pass
 
+			# Find in Visiting Scholars
 			try:
 				people_list += VisitingScholar.objects.filter(
 					Q(firstname__istartswith=query) | Q(lastname__istartswith=query)
@@ -39,6 +45,7 @@ class SearchMixin(object):
 			found = len(people_list) > 0
 
 
+			# Find in Paper
 			paper_list = []
 			try:
 				paper_list += Paper.objects.filter(
@@ -48,7 +55,7 @@ class SearchMixin(object):
 				pass
 			found = len(paper_list) > 0
 
-
+			# Return search result page rendered with variables
 			return render(request, "app_coi/search_result.html", {
 				'found': found, 
 				'people_list': people_list, 
@@ -58,24 +65,28 @@ class SearchMixin(object):
 		else:
 			return super(IndexView, self).get(request)
 
-
+# http://www.columbia-coi.com/
 class IndexView(SearchMixin, TemplateView):
 	template_name = 'app_coi/index.html'
 
-
+# http://www.columbia-coi.com/about
 class AboutView(SearchMixin, TemplateView):
 	template_name = 'app_coi/about.html'
 
+# http://www.columbia-coi.com/contact
 class ContactView(SearchMixin, TemplateView):
 	template_name = 'app_coi/contact.html'	
 
+# http://www.columbia-coi.com/papers
 class PaperListView(SearchMixin, ListView):
 	model = Paper
 	template_name = 'app_coi/papers.html'
 	context_object_name = 'paper_list'
 	queryset = model.objects.all()
 
+	# Handle get request
 	def get(self, request):
+		# Search by title
 		query = request.GET.get("title")
 		if query:
 			q = Q()
@@ -85,6 +96,7 @@ class PaperListView(SearchMixin, ListView):
 			paper_list = self.model.objects.filter(q)
 			return render(request, "app_coi/paper_list.html", {'paper_list': paper_list})
 
+		# Search by author
 		elif request.GET.get("author"):
 			query = request.GET.get("author")
 			q = Q()
@@ -98,7 +110,7 @@ class PaperListView(SearchMixin, ListView):
 			return super(PaperListView, self).get(request)
 
 
-
+# http://www.columbia-coi.com/featured
 class FeaturedView(SearchMixin, ListView):
 	model = Featured
 	template_name = 'app_coi/featured.html'
@@ -106,6 +118,7 @@ class FeaturedView(SearchMixin, ListView):
 	queryset = model.objects.all()
 
 
+# http://www.columbia-coi.com/featured/[slug]
 class FeaturedDetailView(SearchMixin, DetailView):
 	model = Featured
 	template_name = 'app_coi/featured_detail.html'
@@ -118,7 +131,7 @@ class FeaturedDetailView(SearchMixin, DetailView):
 
 
 
-
+# http://www.columbia-coi.com/faculty
 class FacultyView(SearchMixin, ListView):
 	model = Faculty
 	template_name = 'app_coi/faculty.html'
@@ -151,6 +164,7 @@ class FacultyView(SearchMixin, ListView):
 			return super(FacultyView, self).get(request)
 	
 
+# http://www.columbia-coi.com/student
 class StudentView(SearchMixin, ListView):
 	model = Student
 	template_name = 'app_coi/student.html'
@@ -183,12 +197,7 @@ class StudentView(SearchMixin, ListView):
 
 
 
-
-
-
-
-
-
+# http://www.columbia-coi.com/scholar
 class ScholarView(SearchMixin, ListView):
 	model = VisitingScholar
 	template_name = 'app_coi/scholar.html'

@@ -10,6 +10,7 @@ urlpatterns = patterns('',
 	# Admin
 	url(r'^admin/', include(admin.site.urls)),
 	
+	# Link to app_coi/urls.py
 	url(r'', include('app_coi.urls')),
 ) \
 + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \

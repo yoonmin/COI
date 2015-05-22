@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import *
 
+# http://www.columbia-coi.com/admin
+
 class FacultyAdmin(admin.ModelAdmin):
 	list_display = ('firstname', 'lastname', 'email', 'category')
 	list_filter = ('category',)
