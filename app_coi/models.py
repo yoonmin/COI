@@ -13,7 +13,7 @@ class OverwriteStorage(FileSystemStorage):
 
 
 
-class People(models.Model):
+class Person(models.Model):
 	firstname 	= models.CharField(max_length=100)
 	lastname 	= models.CharField(max_length=100)
 	img 		= models.ImageField(upload_to='people', storage=OverwriteStorage())
@@ -39,7 +39,7 @@ class People(models.Model):
 
 
 
-class Faculty(People):
+class Faculty(Person):
 	choices = (
 		("D", "Director"),
 		("A", "Associate Director"),
@@ -49,7 +49,7 @@ class Faculty(People):
 	category = models.CharField(max_length=1, choices=choices, default="D")
 
 
-class Student(People):
+class Student(Person):
 	choices = (
 		("C", "Current Students"),
 		("A", "Alumni"),
@@ -58,7 +58,7 @@ class Student(People):
 
 
 
-class VisitingScholar(People):
+class VisitingScholar(Person):
 	choices = (
 		("C", "Current Visiting Scholar"),
 		("P", "Past Visiting Scholar"),
