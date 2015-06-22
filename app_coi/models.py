@@ -83,6 +83,8 @@ class Featured(models.Model):
 
 	interview	= models.URLField(blank=True, null=True)
 	
+	order 		= models.IntegerField(blank=True, null=True, default=0)
+
 	# Sulgify page name
 	# (ex) "David Stark Interviewed on Bloomberg News"
 	# -> Slugify: 	"david-stark-interviewed-on-bloomberg-news"
