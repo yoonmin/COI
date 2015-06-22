@@ -66,8 +66,11 @@ class SearchMixin(object):
 			return super(IndexView, self).get(request)
 
 # http://www.columbia-coi.com/
-class IndexView(SearchMixin, TemplateView):
+class IndexView(SearchMixin, ListView):
+	model = Featured
 	template_name = 'app_coi/index.html'
+	context_object_name = 'featured_list'
+	queryset = model.objects.filter(order__gt=0).order_by("order")
 
 # http://www.columbia-coi.com/about
 class AboutView(SearchMixin, TemplateView):

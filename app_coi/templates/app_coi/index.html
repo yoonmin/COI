@@ -12,18 +12,11 @@
 
 	<div id="slider">
 		<ul id="lightSlider">
-			<li class="slider_content" data-thumb="media/featured/stark_small.jpg">
-				<img src="media/featured/stark.jpg" />
-			</li>
-			<li class="slider_content" data-thumb="media/featured/gina_neff_small.jpg">
-				<img src="media/featured/gina_neff.jpg" />
-			</li>
-			<li class="slider_content" data-thumb="media/featured/joan_robinson_small.jpg">
-				<img src="media/featured/joan_robinson.jpg" />
-			</li>
-			<li class="slider_content" data-thumb="media/featured/daniel_beunza_small.jpg">
-				<img src="media/featured/daniel_beunza.jpg" />
-			</li>
+			{% for featured in featured_list %}
+				<li class="slider_content" data-thumb="media/{{featured.thumb}}">
+					<img src="media/{{featured.cover}}" />
+				</li>
+			{% endfor %}
 		</ul>
 
 
@@ -31,161 +24,59 @@
 
 
 		<ul id="slider_description">
+			{% for featured in featured_list %}
 
+				{% if forloop.first %}
+				<li class="slider_box active">
+				{% else %}
+				<li class="slider_box hidden">
+				{% endif %}
 
-			
-			<li class="slider_box active">
-				<a href="featured/david-stark-interviewed-on-bloomberg-news">
-				<div class="slider_visible">
-					<div class="slider_title">David Stark Interviewed on Bloomberg News</div>
+					<a href="featured/{{featured.slug}}">
+					<div class="slider_visible">
+						<div class="slider_title">
+							{% if featured.category == "Interview" %}
+								{{featured.name}}
+							{% else %}
+							<span class="title_header">{{featured.category}}:</span><br><span class="title_name">{{featured.name}}<br></span>
+							{% endif %}
+						</div>
 
-					<ul class="slider_hidden">
+						<ul class="slider_hidden">
+						{{featured.summary}}
+						<br><br>
+						Click to learn more
 
-COI Director David Stark was interviewed by Bloomberg News for his co-authored paper in the Proceedings of the National Academy of Sciences. The paper titled “Ethnic diversity deflates price bubbles” suggests that diversity may protect financial markets from excess. Since bubbles form when traders excessively trust others’ judgments, better information processing occurs in ethnically diverse settings. 
-
-					<br><br>
-					Click to learn more
-
-					</ul>
-<!-- More information about his work is available at:
-http://www.lse.ac.uk/management/people/dbeunza.aspx
- -->
-
-				</div>
-				</a>
-
-				<ul class="pager">
-					<li class="page active"><a href="#" onclick="return false">1</a></li>
-					<li class="page"><a href="#" onclick="return false">2</a></li>
-					<li class="page"><a href="#" onclick="return false">3</a></li>
-					<li class="page"><a href="#" onclick="return false">4</a></li>
-				</ul>
-			</li>
-			<!-- </a> -->
-
-
-
-
-
-
-			
-			<li class="slider_box hidden">
-				<a href="featured/gina-neff">
-				<div class="slider_visible">
-					<div class="slider_title"><span class="title_header">Featured Alumni:</span><br><span class="title_name">Gina Neff</span></div>
-					<div class="slider_content">
-
-						
-
+						</ul>
 					</div>
-					<ul class="slider_hidden">
+					</a>
 
-Gina Neff is associate professor of communication at the University of Washington and the School for Public Policy at Central European University in Budapest. She studies how people work with data in teams and groups, thereby exploring the impact of new information and communication technologies on workers, workplaces, and industries. She wrote Venture Labor and with Dawn Nafus has written the forthcoming Quantified Self. She advises Data &amp; Society, a policy organization headed by danah boyd, and lectures on data’s social and political impacts. Her research has been funded by the National Science Foundation, Intel, and Microsoft Research.
-
-					<br><br>
-					Click to learn more
+					<ul class="pager">
+						<li class="page active"><a href="#" onclick="return false">1</a></li>
+						<li class="page"><a href="#" onclick="return false">2</a></li>
+						<li class="page"><a href="#" onclick="return false">3</a></li>
+						<li class="page"><a href="#" onclick="return false">4</a></li>
 					</ul>
+				</li>
 
-				</div>
-				</a>
+			{% endfor %}
 
-				<ul class="pager">
-					<li class="page active"><a href="#" onclick="return false">1</a>
-					<li class="page"><a href="#" onclick="return false">2</a>
-					<li class="page"><a href="#" onclick="return false">3</a>
-					<li class="page"><a href="#" onclick="return false">4</a>
-				</ul>
-			</li>
+		</ul>
+		</div>
 
 
+		<ul id="gallery">
+			<span style="margin-bottom: 4%; color: #008aff; font-family:'Lusitana-Bold'; font-size: 1.6vw;"><b>FEATURED</b></span>
 
-
-			
-			<li class="slider_box hidden">
-				<a href="featured/joan-robinson">
-				<div class="slider_visible">
-					<div class="slider_title"><span class="title_header">Featured Student:</span><br><span class="title_name">Joan Robinson</span></div>
-					<div class="slider_content">
-
-						
-
-					</div>
-					<ul class="slider_hidden">
-
-Joan Robinson’s doctoral dissertation, "Diagnosing Technology: Bodies, Knowledge, and Control on the Maternal-Fetal Frontier," has been awarded a 2014 National Science Foundation Dissertation Improvement Grant from the Science, Technology, and Society division. Combining technology studies, legal studies, and gender studies, the award supports her research on the position of home pregnancy tests in our social world. In the rapidly changing landscapes of reproductive technology, medical diagnosis, and information sharing, the research develops a new understanding of privacy, surveillance, and control.
-
-					<br><br>
-					Click to learn more
-					</ul>
-<!-- More information about his work is available at:
-http://www.lse.ac.uk/management/people/dbeunza.aspx
- -->
-
-				</div>
-				</a>
-
-				<ul class="pager">
-					<li class="page active"><a href="#" onclick="return false">1</a>
-					<li class="page"><a href="#" onclick="return false">2</a>
-					<li class="page"><a href="#" onclick="return false">3</a>
-					<li class="page"><a href="#" onclick="return false">4</a>
-				</ul>
-			</li>
-
-
-
-
-
-
-			
-			<li class="slider_box hidden">
-				<a href="featured/daniel-beunza">
-				<div class="slider_visible">
-					<div class="slider_title"><span class="title_header">Featured Faculty Affiliate:</span><br><span class="title_name">Daniel Beunza<br></span></div>
-					<div class="slider_content">
-
-						
-
-					</div>
-					<ul class="slider_hidden">
-Beunza is Assistant Professor of Management at the London School of Economics. His research in the social studies of finance explores how social relations and technology shape financial value. As examples, Beunza has studied a derivatives trading room in a Wall Street bank, financial analysts’ valuation of dot-com stocks, the automation of the New York Stock Exchange, and the role of NGOs in responsible investment. He is currently writing a book on the role of bank culture in the reform of Wall Street and the City of London. Beunza co-edits Socializing Finance, the leading academic blog in the social studies of finance. After earning his Ph.D. from NYU, he taught at Columbia Business School in New York City before joining LSE.
-
-					<br><br>
-					Click to learn more
-
-					</ul>
-
-				</div>
-				</a>
-
-				<ul class="pager">
-					<li class="page active"><a href="#" onclick="return false">1</a>
-					<li class="page"><a href="#" onclick="return false">2</a>
-					<li class="page"><a href="#" onclick="return false">3</a>
-					<li class="page"><a href="#" onclick="return false">4</a>
-				</ul>
-			</li>
-
-
-
-
-
-
-
-		</ul> 
-	</div>
-
-
-	<ul id="gallery">
-		<span style="margin-bottom: 4%; color: #008aff; font-family:'Lusitana-Bold'; font-size: 1.6vw;"><b>FEATURED</b></span>
-		<li class="active"><a href="#" onclick="return false"><img src="media/featured/stark_small.jpg" /></a></li>
-		<li><a href="#" onclick="return false"><img src="media/featured/gina_neff_small.jpg" /></a></li>
-		<li><a href="#" onclick="return false"><img src="media/featured/joan_robinson_small.jpg" /></a></li>
-		<li><a href="#" onclick="return false"><img src="media/featured/daniel_beunza_small.jpg" /></a></li>
-	</ul>
-
-
-
+			{% for featured in featured_list %}
+				{% if forloop.first %}
+					<li class="active">
+				{% else %}
+					<li>
+				{% endif %}
+				<a href="#" onclick="return false"><img src="media/{{featured.thumb}}" /></a></li>
+			{% endfor %}
+		</ul>
 
 
 

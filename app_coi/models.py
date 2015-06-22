@@ -80,10 +80,9 @@ class Featured(models.Model):
 	publication = models.TextField(blank=True, null=True)
 	projects 	= models.TextField(blank=True, null=True)
 	news		= models.TextField(blank=True, null=True)
-
 	interview	= models.URLField(blank=True, null=True)
 	
-	order 		= models.IntegerField(blank=True, null=True, default=0)
+	order 		= models.IntegerField(default=0, blank=True, null=True)
 
 	# Sulgify page name
 	# (ex) "David Stark Interviewed on Bloomberg News"
