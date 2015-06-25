@@ -42,7 +42,6 @@ class SearchMixin(object):
 				).values()
 			except ObjectDoesNotExist:
 				pass
-			found = len(people_list) > 0
 
 
 			# Find in Paper
@@ -53,7 +52,8 @@ class SearchMixin(object):
 				).values()
 			except ObjectDoesNotExist:
 				pass
-			found = len(paper_list) > 0
+			
+			found = (len(paper_list) > 0) or (len(people_list) > 0)
 
 			# Return search result page rendered with variables
 			return render(request, "app_coi/search_result.html", {
@@ -105,7 +105,7 @@ class PaperListView(SearchMixin, ListView):
 			q = Q()
 			for keyword in query.split():
 				q = q & Q(author__icontains=keyword)
-			
+
 			paper_list = self.model.objects.filter(q)
 			return render(request, "app_coi/paper_list.html", {'paper_list': paper_list})
 
