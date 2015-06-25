@@ -233,18 +233,8 @@ class ScholarView(SearchMixin, ListView):
 
 
 
-
-
-
-
-
 class EventView(SearchMixin, TemplateView):
 	template_name = 'app_coi/event.html'
 
 
-
-
-
-# class FacultyView(TemplateView):
-# 	template_name = 'app_coi/faculty.html'
 
