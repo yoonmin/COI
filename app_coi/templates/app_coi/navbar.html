@@ -26,7 +26,7 @@
 		<div id="navbar_search_hidden">
 			<div>
 				<div id="search_form" class="transparent">
-					<form autocomplete="off" class="" method="post">
+					<form autocomplete="off" class="" method="post" action="{% url 'index' %}">
 						{% csrf_token %}
 						<input type="text" autocomplete="off" id="search_input" name="search" placeholder="Search" value="" />
 						<input id="search_submit" type="submit" value=" " />
